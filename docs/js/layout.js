@@ -18,6 +18,14 @@ var Layout = function () {
         $item.height($wHeight); 
         $item.addClass('full-screen');
 
+        // configurate carousel interval
+        $('#carousel-example-generic').carousel({
+            interval: 4500
+        });
+        
+        // Carrousel transition
+        $.fn.carousel.Constructor.TRANSITION_DURATION = 500;
+
         // Handle video carousel
         if ($('.video-carousel').length > 0) {
             // Pause all videos initially
