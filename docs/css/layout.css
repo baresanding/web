@@ -14,7 +14,6 @@
 	Premium:		Premium Metronic Admin Theme: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
 
 -----------------------------------------------------------------------*/
-
 /*----------------------------------------------------------------------
 	VIDEO SLIDER STYLES
 -----------------------------------------------------------------------*/
@@ -1157,6 +1156,7 @@ fieldset[disabled] .btn-theme {
 .masonry-grid .masonry-grid-item {
   display: block;
   float: left;
+  vertical-align: top;
   padding: 0 2px;
   margin-bottom: 4px;
 }
