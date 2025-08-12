@@ -83,7 +83,7 @@
         <!--========== END HEADER ==========-->
 
         <!--========== VIDEO SLIDER ==========-->
-        <div id="carousel-example-generic" class="carousel slide video-carousel" data-ride="carousel" data-interval="4500">
+        <div id="carousel-example-generic" class="carousel slide video-carousel" data-pause="false">
             <div class="container">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -133,6 +133,48 @@
             </div>
         </div>
         <!--========== END VIDEO SLIDER ==========-->
+        
+        <!-- Force carousel to continue cycling -->
+        <script>
+        $(document).ready(function() {
+            // Override Bootstrap carousel pause behavior
+            var $carousel = $('#carousel-example-generic');
+            
+            // Remove any existing carousel instance
+            if ($carousel.data('bs.carousel')) {
+                $carousel.carousel('destroy');
+            }
+            
+            // Initialize with our custom settings
+            $carousel.carousel({
+                interval: 4500,
+                pause: false,
+                wrap: true,
+                keyboard: false
+            });
+            
+            // Force start
+            $carousel.carousel('cycle');
+            
+            // Prevent pause events
+            $carousel.on('pause.bs.carousel', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).carousel('cycle');
+                return false;
+            });
+            
+            // Prevent mouse events from stopping carousel
+            $carousel.off('mouseenter mouseleave');
+            $carousel.on('mouseenter mouseleave', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+            
+            console.log('HTML carousel override applied');
+        });
+        </script>
 
         <!--========== PAGE LAYOUT ==========-->
         <!-- Service -->
@@ -494,6 +536,9 @@
         <script src="js/components/wow.min.js" type="text/javascript"></script>
         <script src="js/components/swiper.min.js" type="text/javascript"></script>
         <script src="js/components/masonry.min.js" type="text/javascript"></script>
+
+        <!-- Carousel Fix Script - Must be last -->
+        <script src="js/carousel-fix.js" type="text/javascript"></script>
 
         <!-- Prevent all links with href="#" from scrolling to top (for placeholder links) -->
         <script>
