@@ -1664,3 +1664,68 @@ fieldset[disabled] .btn-theme {
 .height-400 {
   height: 400px !important;
 }
+
+/* Video carousel specific styles */
+.video-carousel {
+    /* Ensure carousel continues cycling */
+    pointer-events: none; /* Disable mouse interactions */
+}
+
+.video-carousel .carousel-inner {
+    /* Force smooth transitions */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Override any Bootstrap hover effects */
+.video-carousel:hover,
+.video-carousel:focus {
+    /* Prevent any hover effects */
+    outline: none;
+}
+
+/* Ensure videos continue playing */
+.video-background {
+    pointer-events: none; /* Disable video controls */
+}
+
+/* Debug styles - remove in production */
+.video-carousel::before {
+    content: "Carousel Active - No Pause";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,255,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 1000;
+}
+
+/* Additional Bootstrap override styles */
+.video-carousel[data-pause="false"] {
+    /* Force no pause behavior */
+}
+
+/* Disable all hover effects on carousel elements */
+.video-carousel * {
+    pointer-events: none !important;
+}
+
+/* Re-enable pointer events for interactive elements */
+.video-carousel .carousel-centered,
+.video-carousel .carousel-centered *,
+.video-carousel .btn-theme {
+    pointer-events: auto !important;
+}
+
+/* Force carousel to continue cycling */
+.video-carousel.carousel {
+    /* Override Bootstrap's default pause behavior */
+}
+
+/* Ensure carousel indicators remain clickable */
+.video-carousel .carousel-indicators li {
+    pointer-events: auto !important;
+    cursor: pointer;
+}

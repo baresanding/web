@@ -19,9 +19,26 @@ var Layout = function () {
         $item.addClass('full-screen');
 
         // configurate carousel interval
-        $('#carousel-example-generic').carousel({
-            interval: 4500
+        // pause: false - prevents carousel from pausing on hover
+        // wrap: true - enables infinite loop
+        // keyboard: false - disables keyboard navigation to prevent interference
+        
+        // First, destroy any existing carousel instance
+        var $carousel = $('#carousel-example-generic');
+        if ($carousel.data('bs.carousel')) {
+            $carousel.carousel('destroy');
+        }
+        
+        // Then initialize with our custom settings
+        $carousel.carousel({
+            interval: 4500,
+            pause: false,
+            wrap: true,
+            keyboard: false
         });
+        
+        // Force start the carousel
+        $carousel.carousel('cycle');
         
         // Carrousel transition
         $.fn.carousel.Constructor.TRANSITION_DURATION = 500;
@@ -52,6 +69,41 @@ var Layout = function () {
                     newActiveVideo.play();
                 }
             });
+            
+            // Ensure carousel continues running and doesn't stop
+            // Force restart if carousel stops
+            setInterval(function() {
+                var $carousel = $('#carousel-example-generic');
+                if (!$carousel.data('bs.carousel').interval) {
+                    $carousel.carousel('cycle');
+                }
+            }, 1000);
+            
+            // Prevent mouse events from interfering with carousel
+            // Disable hover pause behavior completely
+            $('#carousel-example-generic').off('mouseenter mouseleave');
+            
+            // Force carousel to continue cycling
+            $('#carousel-example-generic').on('mouseenter mouseleave', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+            
+            // Additional safety: prevent any pause events
+            $('#carousel-example-generic').on('pause.bs.carousel', function(e) {
+                console.log('Carousel pause prevented');
+                e.preventDefault();
+                e.stopPropagation();
+                // Force continue cycling
+                $(this).carousel('cycle');
+                return false;
+            });
+            
+            // Log carousel status for debugging
+            console.log('Video carousel initialized with pause: false');
+            console.log('Carousel interval:', $carousel.data('bs.carousel').options.interval);
+            console.log('Carousel pause setting:', $carousel.data('bs.carousel').options.pause);
         } else {
             // Original image carousel logic
             $('.carousel img').each(function() {
@@ -119,6 +171,33 @@ var Layout = function () {
             $(window).scroll(function() {
                 handleHeaderOnScroll();
             });
+            
+            // Additional carousel safety check after page load
+            setTimeout(function() {
+                var $carousel = $('#carousel-example-generic');
+                if ($carousel.length > 0 && $carousel.hasClass('video-carousel')) {
+                    console.log('Post-load carousel check');
+                    
+                    // Force carousel to continue if it stopped
+                    if (!$carousel.data('bs.carousel').interval) {
+                        console.log('Carousel stopped, restarting...');
+                        $carousel.carousel('cycle');
+                    }
+                    
+                    // Ensure pause is disabled
+                    if ($carousel.data('bs.carousel').options.pause !== false) {
+                        console.log('Forcing pause: false');
+                        $carousel.carousel('destroy');
+                        $carousel.carousel({
+                            interval: 4500,
+                            pause: false,
+                            wrap: true,
+                            keyboard: false
+                        });
+                        $carousel.carousel('cycle');
+                    }
+                }
+            }, 2000); // Check after 2 seconds
         }
     };
 }();
