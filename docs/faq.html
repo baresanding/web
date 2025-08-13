@@ -65,10 +65,21 @@
                     <div class="collapse navbar-collapse nav-collapse">
                         <div class="menu-container">
                             <ul class="navbar-nav navbar-nav-right">
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="about.html">About</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="faq.html">FAQ</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="index.html" data-translate="nav.home">Home</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="about.html" data-translate="nav.about">About</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="faq.html" data-translate="nav.faq">FAQ</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="contact.html" data-translate="nav.contact">Contact</a></li>
+                                <!-- Language Switcher -->
+                                <li class="nav-item">
+                                    <div class="nav-item-child language-switch-container">
+                                        <span class="language-label es-label">ES</span>
+                                        <label class="language-switch">
+                                            <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+                                            <span class="slider"></span>
+                                        </label>
+                                        <span class="language-label en-label">EN</span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -82,8 +93,8 @@
         <!--========== PARALLAX ==========-->
         <div class="parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
             <div class="parallax-content container">
-                <h1 class="carousel-title">FAQ</h1>
-                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br/> enim minim estudiat veniam siad venumus dolore</p>
+                <h1 class="carousel-title" data-translate="faq.hero.title">FAQ</h1>
+                <p data-translate="faq.hero.description">Preguntas frecuentes sobre nuestros servicios de tecnología <br/> y soluciones de ingeniería electrónica</p>
             </div>
         </div>
         <!--========== PARALLAX ==========-->
@@ -96,8 +107,8 @@
                     <div class="col-sm-6 sm-margin-b-2">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
                             <div class="service" data-height="height">
-                                <h3>Art Of Coding</h3>
-                                <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                <h3 data-translate="faq.services.question1.title">¿Trabajan con pequeñas empresas?</h3>
+                                <p class="margin-b-5" data-translate="faq.services.question1.answer">Sí, trabajamos con empresas de todos los tamaños, desde startups hasta grandes corporaciones. Adaptamos nuestras soluciones a su presupuesto y necesidades.</p>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
                         </div>
@@ -105,8 +116,8 @@
                     <div class="col-sm-6">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
                             <div class="service" data-height="height">
-                                <h3>Responsive Design</h3>
-                                <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                <h3 data-translate="faq.services.question2.title">¿Pueden trabajar de forma remota?</h3>
+                                <p class="margin-b-5" data-translate="faq.services.question2.answer">Absolutamente. Utilizamos metodologías ágiles y herramientas de colaboración en línea para trabajar eficientemente con clientes de cualquier ubicación.</p>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
                         </div>
@@ -118,8 +129,8 @@
                     <div class="col-sm-6 sm-margin-b-2">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
                             <div class="service" data-height="height">
-                                <h3>Feature Reach</h3>
-                                <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                <h3 data-translate="faq.services.question3.title">¿Qué tecnologías utilizan?</h3>
+                                <p class="margin-b-5" data-translate="faq.services.question3.answer">Utilizamos las últimas tecnologías en microcontroladores, IoT, machine learning, desarrollo web/mobile y herramientas de diseño CAD 3D.</p>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
                         </div>
@@ -127,8 +138,8 @@
                     <div class="col-sm-6">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
                             <div class="service" data-height="height">
-                                <h3>Useful Documentation</h3>
-                                <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                <h3 data-translate="faq.services.question4.title">¿Proveen documentación?</h3>
+                                <p class="margin-b-5" data-translate="faq.services.question4.answer">Sí, entregamos documentación técnica completa, manuales de usuario, esquemas eléctricos y código fuente comentado para cada proyecto.</p>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
                         </div>
@@ -140,8 +151,8 @@
                     <div class="col-sm-6 sm-margin-b-2">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".4s">
                             <div class="service" data-height="height">
-                                <h3>Fast Delivery</h3>
-                                <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                <h3 data-translate="faq.services.question5.title">¿Cómo es el proceso de pago?</h3>
+                                <p class="margin-b-5" data-translate="faq.services.question5.answer">Manejamos pagos flexibles: 50% al inicio, 30% en hitos intermedios y 20% al finalizar. Aceptamos transferencias bancarias y pagos digitales.</p>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
                         </div>
@@ -149,8 +160,8 @@
                     <div class="col-sm-6">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
                             <div class="service" data-height="height">
-                                <h3>Free Plugins</h3>
-                                <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                <h3 data-translate="faq.services.question6.title">¿Ofrecen capacitación?</h3>
+                                <p class="margin-b-5" data-translate="faq.services.question6.answer">Sí, ofrecemos capacitación técnica para que su equipo pueda operar y mantener las soluciones que desarrollamos para ustedes.</p>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
                         </div>
@@ -165,7 +176,7 @@
         <div class="content-lg container">
             <div class="row margin-b-20">
                 <div class="col-sm-6">
-                    <h2>General Questions</h2>
+                    <h2 data-translate="faq.general.title">Preguntas Generales</h2>
                 </div>
             </div>
             <!--// end row -->
@@ -173,9 +184,17 @@
             <div class="row">
                 <div class="col-sm-7 sm-margin-b-50">
                     <div class="margin-b-30">
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua. Ut enimet minim veniam magna aliqua. Ut enim minim veniam exercitation laboris ut siad consequat siad minim enum esqudiat dolore.</p>
+                        <h4 data-translate="faq.question1.title">¿Qué servicios ofrecen?</h4>
+                        <p data-translate="faq.question1.answer">Ofrecemos servicios completos de ingeniería electrónica, incluyendo desarrollo de hardware, software, firmware, sistemas de inteligencia artificial, diseño 3D y soluciones especializadas para diversos sectores como agrotecnología, transporte e industria 4.0.</p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret tempor incididunt dolore magna consequat siad minim aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua. Ut enim minim veniam exercitation laboris ut siad consequat siad minim enum esqudiat dolore.</p>
+                    <div class="margin-b-30">
+                        <h4 data-translate="faq.question2.title">¿Cuánto tiempo toma desarrollar un proyecto?</h4>
+                        <p data-translate="faq.question2.answer">El tiempo de desarrollo varía según la complejidad del proyecto. Proyectos simples pueden tomar 2-4 semanas, mientras que soluciones complejas pueden requerir 3-6 meses. Siempre proporcionamos un cronograma detallado después de la evaluación inicial.</p>
+                    </div>
+                    <div class="margin-b-30">
+                        <h4 data-translate="faq.question3.title">¿Ofrecen soporte técnico post-entrega?</h4>
+                        <p data-translate="faq.question3.answer">Sí, ofrecemos soporte técnico completo después de la entrega. Esto incluye garantía, mantenimiento, actualizaciones y asistencia técnica para asegurar el óptimo funcionamiento de su solución.</p>
+                    </div>
                 </div>
                 <div class="col-sm-4 col-sm-offset-1">
                     <img class="img-responsive" src="img/640x380/01.jpg" alt="Our Office">
@@ -185,72 +204,7 @@
         </div>
         <!-- End General Questions -->
 
-        <!-- Pricing -->
-        <div class="bg-color-sky-light">
-            <div class="content-lg container">
-                <div class="row row-space-1">
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
-                            <!-- Pricing -->
-                            <div class="pricing">
-                                <div class="margin-b-30">
-                                    <i class="pricing-icon icon-chemistry"></i>
-                                    <h3>Starter Kit <span> - $</span> 49</h3>
-                                    <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <ul class="list-unstyled pricing-list margin-b-50">
-                                    <li class="pricing-list-item">Basic Features</li>
-                                    <li class="pricing-list-item">Up to 5 products</li>
-                                    <li class="pricing-list-item">50 Users Panels</li>
-                                </ul>
-                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                            </div>
-                            <!-- End Pricing -->
-                        </div>
-                    </div>
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInUp" data-wow-duration=".3" data-wow-delay=".2s">
-                            <!-- Pricing -->
-                            <div class="pricing pricing-active">
-                                <div class="margin-b-30">
-                                    <i class="pricing-icon icon-badge"></i>
-                                    <h3>Professional <span> - $</span> 149</h3>
-                                    <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <ul class="list-unstyled pricing-list margin-b-50">
-                                    <li class="pricing-list-item">Basic Features</li>
-                                    <li class="pricing-list-item">Up to 100 products</li>
-                                    <li class="pricing-list-item">100 Users Panels</li>
-                                </ul>
-                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                            </div>
-                            <!-- End Pricing -->
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".1s">
-                            <!-- Pricing -->
-                            <div class="pricing">
-                                <div class="margin-b-30">
-                                    <i class="pricing-icon icon-shield"></i>
-                                    <h3>Advanced <span> - $</span> 249</h3>
-                                    <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-                                </div>
-                                <ul class="list-unstyled pricing-list margin-b-50">
-                                    <li class="pricing-list-item">Extended Features</li>
-                                    <li class="pricing-list-item">Unlimited products</li>
-                                    <li class="pricing-list-item">Unlimited Users Panels</li>
-                                </ul>
-                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
-                            </div>
-                            <!-- End Pricing -->
-                        </div>
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End Pricing -->
+
         <!--========== END PAGE LAYOUT ==========-->
 
         <!--========== FOOTER ==========-->
@@ -266,7 +220,6 @@
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">About</a></li>
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">Careers</a></li>
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">Contact</a></li>
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">Terms</a></li>
                             </ul>
                             <!-- End List -->
                         </div>
@@ -278,12 +231,12 @@
                             <!-- End List -->
                         </div>
                         <div class="col-sm-5 sm-margin-b-30">
-                            <h2 class="color-white">Send Us A Note</h2>
-                            <input type="text" class="form-control footer-input margin-b-20" placeholder="Name" required>
-                            <input type="email" class="form-control footer-input margin-b-20" placeholder="Email" required>
-                            <input type="text" class="form-control footer-input margin-b-20" placeholder="Phone" required>
-                            <textarea class="form-control footer-input margin-b-30" rows="6" placeholder="Message" required></textarea>
-                            <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase">Submit</button>
+                            <h2 class="color-white" data-translate="contact.title">Send Us A Note</h2>
+                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.name" placeholder="Name" required>
+                            <input type="email" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.email" placeholder="Email" required>
+                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.phone" placeholder="Phone" required>
+                            <textarea class="form-control footer-input margin-b-30" rows="6" data-translate-placeholder="contact.message" placeholder="Message" required></textarea>
+                            <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" data-translate="contact.send">Submit</button>
                         </div>
                     </div>
                     <!--// end row -->
@@ -298,7 +251,7 @@
                         <img class="footer-logo" src="img/logo.png" alt="BARESAND Logo">
                     </div>
                     <div class="col-xs-6 text-right">
-                        <p class="margin-b-0">&copy; 2025 BARESAND. Todos los derechos reservados.</p>
+                        <p class="margin-b-0" data-translate="footer.copyright">&copy; 2025 BARESAND. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>
@@ -309,7 +262,7 @@
         <!--========== END FOOTER ==========-->
 
         <!-- Back To Top -->
-        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top" data-translate="common.top">Top</a>
 
         <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
         <!-- CORE PLUGINS -->
@@ -327,6 +280,319 @@
         <!-- PAGE LEVEL SCRIPTS -->
         <script src="js/layout.min.js" type="text/javascript"></script>
         <script src="js/components/wow.min.js" type="text/javascript"></script>
+
+        <!-- Language Translation System -->
+        <style>
+        .language-switch-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            height: auto;
+            white-space: nowrap;
+        }
+        
+        .language-switch-container:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .language-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: inherit;
+            transition: opacity 0.3s ease;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .language-label.active {
+            opacity: 1;
+        }
+        
+        .language-label.inactive {
+            opacity: 0.6;
+        }
+        
+        .language-switch {
+            position: relative;
+            display: inline-block;
+            width: 28px;
+            height: 14px;
+            vertical-align: middle;
+        }
+        
+        .language-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 10px;
+            width: 10px;
+            left: 1px;
+            bottom: 1px;
+            background: #fff;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        input:checked + .slider {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(14px);
+        }
+        
+        .slider:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        </style>
+
+        <script>
+        // Translation object with all text content
+        const translations = {
+            es: {
+                nav: {
+                    home: "Home",
+                    about: "About", 
+                    faq: "FAQ",
+                    contact: "Contact"
+                },
+                faq: {
+                    hero: {
+                        title: "FAQ",
+                        description: "Preguntas frecuentes sobre nuestros servicios de tecnología y soluciones de ingeniería electrónica"
+                    },
+                    general: {
+                        title: "Preguntas Generales"
+                    },
+                    question1: {
+                        title: "¿Qué servicios ofrecen?",
+                        answer: "Ofrecemos servicios completos de ingeniería electrónica, incluyendo desarrollo de hardware, software, firmware, sistemas de inteligencia artificial, diseño 3D y soluciones especializadas para diversos sectores como agrotecnología, transporte e industria 4.0."
+                    },
+                    question2: {
+                        title: "¿Cuánto tiempo toma desarrollar un proyecto?",
+                        answer: "El tiempo de desarrollo varía según la complejidad del proyecto. Proyectos simples pueden tomar 2-4 semanas, mientras que soluciones complejas pueden requerir 3-6 meses. Siempre proporcionamos un cronograma detallado después de la evaluación inicial."
+                    },
+                    question3: {
+                        title: "¿Ofrecen soporte técnico post-entrega?",
+                        answer: "Sí, ofrecemos soporte técnico completo después de la entrega. Esto incluye garantía, mantenimiento, actualizaciones y asistencia técnica para asegurar el óptimo funcionamiento de su solución."
+                    },
+                    services: {
+                        question1: {
+                            title: "¿Trabajan con pequeñas empresas?",
+                            answer: "Sí, trabajamos con empresas de todos los tamaños, desde startups hasta grandes corporaciones. Adaptamos nuestras soluciones a su presupuesto y necesidades."
+                        },
+                        question2: {
+                            title: "¿Pueden trabajar de forma remota?",
+                            answer: "Absolutamente. Utilizamos metodologías ágiles y herramientas de colaboración en línea para trabajar eficientemente con clientes de cualquier ubicación."
+                        },
+                        question3: {
+                            title: "¿Qué tecnologías utilizan?",
+                            answer: "Utilizamos las últimas tecnologías en microcontroladores, IoT, machine learning, desarrollo web/mobile y herramientas de diseño CAD 3D."
+                        },
+                        question4: {
+                            title: "¿Proveen documentación?",
+                            answer: "Sí, entregamos documentación técnica completa, manuales de usuario, esquemas eléctricos y código fuente comentado para cada proyecto."
+                        },
+                        question5: {
+                            title: "¿Cómo es el proceso de pago?",
+                            answer: "Manejamos pagos flexibles: 50% al inicio, 30% en hitos intermedios y 20% al finalizar. Aceptamos transferencias bancarias y pagos digitales."
+                        },
+                        question6: {
+                            title: "¿Ofrecen capacitación?",
+                            answer: "Sí, ofrecemos capacitación técnica para que su equipo pueda operar y mantener las soluciones que desarrollamos para ustedes."
+                        }
+                    }
+                },
+                contact: {
+                    title: "Mandanos un mensaje",
+                    name: "Nombre",
+                    email: "Email",
+                    phone: "Telefono", 
+                    message: "Mensaje",
+                    send: "Enviar"
+                },
+                footer: {
+                    copyright: "© 2025 BARESAND. Todos los derechos reservados."
+                },
+                common: {
+                    top: "Top"
+                }
+            },
+            en: {
+                nav: {
+                    home: "Home",
+                    about: "About",
+                    faq: "FAQ",
+                    contact: "Contact"
+                },
+                faq: {
+                    hero: {
+                        title: "FAQ",
+                        description: "Frequently asked questions about our technology services and electronic engineering solutions"
+                    },
+                    general: {
+                        title: "General Questions"
+                    },
+                    question1: {
+                        title: "What services do you offer?",
+                        answer: "We offer complete electronic engineering services, including hardware, software, firmware development, artificial intelligence systems, 3D design and specialized solutions for various sectors such as agrotechnology, transportation and industry 4.0."
+                    },
+                    question2: {
+                        title: "How long does it take to develop a project?",
+                        answer: "Development time varies according to project complexity. Simple projects can take 2-4 weeks, while complex solutions may require 3-6 months. We always provide a detailed timeline after the initial evaluation."
+                    },
+                    question3: {
+                        title: "Do you offer post-delivery technical support?",
+                        answer: "Yes, we offer complete technical support after delivery. This includes warranty, maintenance, updates and technical assistance to ensure optimal operation of your solution."
+                    },
+                    services: {
+                        question1: {
+                            title: "Do you work with small businesses?",
+                            answer: "Yes, we work with companies of all sizes, from startups to large corporations. We adapt our solutions to your budget and needs."
+                        },
+                        question2: {
+                            title: "Can you work remotely?",
+                            answer: "Absolutely. We use agile methodologies and online collaboration tools to work efficiently with clients from any location."
+                        },
+                        question3: {
+                            title: "What technologies do you use?",
+                            answer: "We use the latest technologies in microcontrollers, IoT, machine learning, web/mobile development and 3D CAD design tools."
+                        },
+                        question4: {
+                            title: "Do you provide documentation?",
+                            answer: "Yes, we deliver complete technical documentation, user manuals, electrical schematics and commented source code for each project."
+                        },
+                        question5: {
+                            title: "How is the payment process?",
+                            answer: "We handle flexible payments: 50% at start, 30% at intermediate milestones and 20% at completion. We accept bank transfers and digital payments."
+                        },
+                        question6: {
+                            title: "Do you offer training?",
+                            answer: "Yes, we offer technical training so your team can operate and maintain the solutions we develop for you."
+                        }
+                    }
+                },
+                contact: {
+                    title: "Send us a message",
+                    name: "Name",
+                    email: "Email",
+                    phone: "Phone",
+                    message: "Message", 
+                    send: "Send"
+                },
+                footer: {
+                    copyright: "© 2025 BARESAND. All rights reserved."
+                },
+                common: {
+                    top: "Top"
+                }
+            }
+        };
+
+        // Current language state
+        let currentLanguage = localStorage.getItem('language') || 'es';
+
+        // Function to get nested translation value
+        function getTranslation(key, lang) {
+            const keys = key.split('.');
+            let value = translations[lang];
+            
+            for (const k of keys) {
+                if (value && value[k]) {
+                    value = value[k];
+                } else {
+                    return key; // Return original key if translation not found
+                }
+            }
+            
+            return value;
+        }
+
+        // Function to translate all elements
+        function translatePage(language) {
+            // Translate regular text elements
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = getTranslation(key, language);
+                
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else {
+                    element.innerHTML = translation;
+                }
+            });
+
+            // Translate placeholder elements  
+            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                const translation = getTranslation(key, language);
+                element.placeholder = translation;
+            });
+
+            // Update language switch
+            const languageToggle = document.getElementById('languageToggle');
+            const esLabel = document.querySelector('.es-label');
+            const enLabel = document.querySelector('.en-label');
+            
+            if (languageToggle && esLabel && enLabel) {
+                if (language === 'es') {
+                    languageToggle.checked = false;
+                    esLabel.classList.add('active');
+                    esLabel.classList.remove('inactive');
+                    enLabel.classList.add('inactive');
+                    enLabel.classList.remove('active');
+                } else {
+                    languageToggle.checked = true;
+                    enLabel.classList.add('active');
+                    enLabel.classList.remove('inactive');
+                    esLabel.classList.add('inactive');
+                    esLabel.classList.remove('active');
+                }
+            }
+
+            // Update HTML lang attribute
+            document.documentElement.lang = language;
+            
+            // Save language preference
+            localStorage.setItem('language', language);
+            currentLanguage = language;
+        }
+
+        // Function to toggle language
+        function toggleLanguage() {
+            const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            translatePage(newLanguage);
+        }
+
+        // Initialize page with saved language
+        document.addEventListener('DOMContentLoaded', function() {
+            translatePage(currentLanguage);
+        });
+        </script>
 
     </body>
     <!-- END BODY -->

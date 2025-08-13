@@ -66,10 +66,21 @@
                     <div class="collapse navbar-collapse nav-collapse">
                         <div class="menu-container">
                             <ul class="navbar-nav navbar-nav-right">
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="about.html">About</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="faq.html">FAQ</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="index.html" data-translate="nav.home">Home</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="about.html" data-translate="nav.about">About</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="faq.html" data-translate="nav.faq">FAQ</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="contact.html" data-translate="nav.contact">Contact</a></li>
+                                <!-- Language Switcher -->
+                                <li class="nav-item">
+                                    <div class="nav-item-child language-switch-container">
+                                        <span class="language-label es-label">ES</span>
+                                        <label class="language-switch">
+                                            <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+                                            <span class="slider"></span>
+                                        </label>
+                                        <span class="language-label en-label">EN</span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -103,10 +114,10 @@
                     <div class="container">
                         <div class="carousel-centered">
                             <div class="margin-b-40">
-                                <h1 class="carousel-title" style="font-family: 'Montserrat', sans-serif; font-size: 60px;">EL PODER DEL SILICIO A TU SERVICIO</h1>
-                                <p>SOLUCIONES TECNOLOGICAS PARA TU NEGOCIO<br/></p></h1>
+                                <h1 class="carousel-title" style="font-family: 'Montserrat', sans-serif; font-size: 60px;" data-translate="hero.title1">EL PODER DEL SILICIO A TU SERVICIO</h1>
+                                <p data-translate="hero.subtitle1">SOLUCIONES TECNOLOGICAS PARA TU NEGOCIO<br/></p></h1>
                             </div>
-                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase" data-translate="common.explore">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -121,10 +132,10 @@
                     <div class="container">
                         <div class="carousel-centered">
                             <div class="margin-b-40">
-                                <h2 class="carousel-title">SOMOS EL GRANITO DE ARENA<br/> QUE LE FALTABA A TU PROYECTO</h2>
-                                <p>NO PIERDAS MAS TIEMPO HACE DE TU IDEA UNA REALIDAD<br/> </p>
+                                <h2 class="carousel-title" data-translate="hero.title2">SOMOS EL GRANITO DE ARENA<br/> QUE LE FALTABA A TU PROYECTO</h2>
+                                <p data-translate="hero.subtitle2">NO PIERDAS MAS TIEMPO HACE DE TU IDEA UNA REALIDAD<br/> </p>
                             </div>
-                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase" data-translate="common.explore">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -186,8 +197,8 @@
                                     <i class="service-icon icon-settings"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Hardware</h3>
-                                    <p class="margin-b-5">Forjamos la materia prima de los sueños digitales, cimientos tangibles de lo imposible</p>
+                                    <h3 data-translate="services.hardware.title">Hardware</h3>
+                                    <p class="margin-b-5" data-translate="services.hardware.description">Forjamos la materia prima de los sueños digitales, cimientos tangibles de lo imposible</p>
                                 </div>
                                <!-- <a href="#" class="content-wrapper-link"></a>   --> 
                             </div>
@@ -200,8 +211,8 @@
                                     <i class="service-icon icon-screen-desktop"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Software</h3>
-                                    <p class="margin-b-5">Código que respira vida digital, transformando ideas en experiencias interactivas</p>
+                                    <h3 data-translate="services.software.title">Software</h3>
+                                    <p class="margin-b-5" data-translate="services.software.description">Código que respira vida digital, transformando ideas en experiencias interactivas</p>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -214,8 +225,8 @@
                                     <i class="service-icon icon-energy"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Firmware</h3>
-                                    <p class="margin-b-5">El alma invisible que despierta al silicio, puente eterno entre materia y mente</p>
+                                    <h3 data-translate="services.firmware.title">Firmware</h3>
+                                    <p class="margin-b-5" data-translate="services.firmware.description">El alma invisible que despierta al silicio, puente eterno entre materia y mente</p>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -232,8 +243,8 @@
                                     <i class="service-icon icon-bulb"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Inteligencia Artificial</h3>
-                                    <p class="margin-b-5">Sabiduría que emerge del silicio, aprendiendo de cada dato para revelar futuros posibles</p>
+                                    <h3 data-translate="services.ai.title">Inteligencia Artificial</h3>
+                                    <p class="margin-b-5" data-translate="services.ai.description">Sabiduría que emerge del silicio, aprendiendo de cada dato para revelar futuros posibles</p>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -246,8 +257,8 @@
                                     <i class="service-icon icon-layers"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Diseño 3D</h3>
-                                    <p class="margin-b-5">Esculpimos realidades fuera de las 2 dimensiones del papel, dando forma a lo inimaginable en cualquier proyecto</p>
+                                    <h3 data-translate="services.design3d.title">Diseño 3D</h3>
+                                    <p class="margin-b-5" data-translate="services.design3d.description">Esculpimos realidades fuera de las 2 dimensiones del papel, dando forma a lo inimaginable en cualquier proyecto</p>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -260,8 +271,8 @@
                                     <i class="service-icon icon-target"></i>
                                 </div>
                                 <div class="service-info">
-                                    <h3>Sectores Especializados</h3>
-                                    <p class="margin-b-5">Desde electromedicina y agrotecnología hasta la industria 4.0, adaptamos nuestra innovación a cada ecosistema</p>
+                                    <h3 data-translate="services.specialized.title">Sectores Especializados</h3>
+                                    <p class="margin-b-5" data-translate="services.specialized.description">Desde electromedicina y agrotecnología hasta la industria 4.0, adaptamos nuestra innovación a cada ecosistema</p>
                                 </div>
                                 <a href="#" class="content-wrapper-link"></a>    
                             </div>
@@ -277,8 +288,8 @@
         <div class="content-lg container">
             <div class="row margin-b-40">
                 <div class="col-sm-6">
-                    <h2>Trabajos Realizados</h2>
-                    <p>Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito</p>
+                    <h2 data-translate="portfolio.title">Trabajos Realizados</h2>
+                    <p data-translate="portfolio.description">Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito</p>
                 </div>
             </div>
             <!--// end row -->
@@ -291,12 +302,12 @@
                             <img class="img-responsive" src="img/970x647/01.jpg" alt="Latest Products Image">
                         </div>
                     </div>
-                    <h4><a href="#">Automatizacion de Cultivos</a></h4>
+                    <h4><a href="#" data-translate="projects.automation.title">Automatizacion de Cultivos</a></h4>
                     <div class="project-category">
-                        <span class="text-uppercase color-subtitle font-weight-500">Agrotecnología</span>
+                        <span class="text-uppercase color-subtitle font-weight-500" data-translate="projects.automation.category">Agrotecnología</span>
                     </div>
-                    <p>Los controladores automáticos son clave en el cultivo de hongos y sistemas hidropónicos, ya que permiten regular las condiciones microclimáticas, gestionar los ciclos de ventilación y humedad de manera autónoma y, con estos parámetros controlados, asegurar un ambiente ideal que acelera el crecimiento y mejora la calidad del producto final.</p>
-                    <a class="link" href="#">Read More</a>
+                    <p data-translate="projects.automation.description">Los controladores automáticos son clave en el cultivo de hongos y sistemas hidropónicos, ya que permiten regular las condiciones microclimáticas, gestionar los ciclos de ventilación y humedad de manera autónoma y, con estos parámetros controlados, asegurar un ambiente ideal que acelera el crecimiento y mejora la calidad del producto final.</p>
+                    <a class="link" href="#" data-translate="common.readmore">Read More</a>
                 </div>
                 <!-- End Latest Products -->
 
@@ -307,13 +318,13 @@
                             <img class="img-responsive" src="img/970x647/02.jpg" alt="Latest Products Image">
                         </div>
                     </div>
-                    <h4><a href="#">Contador de Vehículos</a></h4>
+                    <h4><a href="#" data-translate="projects.counter.title">Contador de Vehículos</a></h4>
                     <div class="project-category">
-                        <span class="text-uppercase color-subtitle font-weight-500">Transporte</span>
+                        <span class="text-uppercase color-subtitle font-weight-500" data-translate="projects.counter.category">Transporte</span>
                     </div>
-                    <p>
+                    <p data-translate="projects.counter.description">
                     Los contadores son centrales en la planificación de obras, ya que permiten monitorear el comportamiento de los flujos de tránsito en determinadas rutas o corredores y, con esos resultados, conocer las demandas puntuales para abordar la alternativa más acorde.</p>
-                    <a class="link" href="#">Read More</a>
+                    <a class="link" href="#" data-translate="common.readmore">Read More</a>
                 </div>
                 <!-- End Latest Products -->
 
@@ -324,12 +335,12 @@
                             <img class="img-responsive" src="img/970x647/03.jpg" alt="Latest Products Image">
                         </div>
                     </div>
-                    <h4><a href="#">Detector de fallas electricas</a></h4>
+                    <h4><a href="#" data-translate="projects.detector.title">Detector de fallas electricas</a></h4>
                     <div class="project-category">
-                        <span class="text-uppercase color-subtitle font-weight-500">Inteligencia Artificial</span>
+                        <span class="text-uppercase color-subtitle font-weight-500" data-translate="projects.detector.category">Inteligencia Artificial</span>
                     </div>
-                    <p>El detector de fallas eléctricas es un sistema de computer vision que analiza el estado de la red eléctrica en imagenes captadas por drones y detecta posibles problemas o anomalías. Su función es identificar y localizar fallas eléctricas en lineas de media y alta tensión, lo que permite prevenir interrupciones, reducir los costos de mantenimiento y mejorar la eficiencia energética.</p>
-                    <a class="link" href="#">Read More</a>
+                    <p data-translate="projects.detector.description">El detector de fallas eléctricas es un sistema de computer vision que analiza el estado de la red eléctrica en imagenes captadas por drones y detecta posibles problemas o anomalías. Su función es identificar y localizar fallas eléctricas en lineas de media y alta tensión, lo que permite prevenir interrupciones, reducir los costos de mantenimiento y mejorar la eficiencia energética.</p>
+                    <a class="link" href="#" data-translate="common.readmore">Read More</a>
                 </div>
                 <!-- End Latest Products -->
             </div>
@@ -342,8 +353,8 @@
             <div class="content-lg container">
                 <div class="row margin-b-40">
                     <div class="col-sm-6">
-                        <h2>Showcase</h2>
-                        <p>Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito</p>
+                        <h2 data-translate="showcase.title">Showcase</h2>
+                        <p data-translate="showcase.description">Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito</p>
                     </div>
                 </div>
                 <!--// end row -->
@@ -358,8 +369,8 @@
                                 <img class="full-width img-responsive" src="img/800x400/01.jpg" alt="Portfolio Image">
                             </div>
                             <div class="work-content">
-                                <h3 class="color-white margin-b-5">Art Of Coding</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                                <h3 class="color-white margin-b-5" data-translate="showcase.work1.title">Diseño de Hardware</h3>
+                                <p class="color-white margin-b-0" data-translate="showcase.work1.description">Diseñamos hardware para diversas aplicaciones, desde 0 con software especializado y de ultima generacion.</p>
                             </div>
                             <a class="content-wrapper-link" href="#"></a>
                         </div>
@@ -372,8 +383,8 @@
                                 <img class="full-width img-responsive" src="img/397x400/01.jpg" alt="Portfolio Image">
                             </div>
                             <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                                <h3 class="color-white margin-b-5" data-translate="showcase.work2.title">PCB</h3>
+                                <p class="color-white margin-b-0" data-translate="showcase.work2.description">Nuestras placas de circuito impreso son diseñadas para cumplir con las necesidades especificas de cada proyecto, desde sistemas embebidos hasta dispositivos industriales.</p>
                             </div>
                             <a class="content-wrapper-link" href="#"></a>
                         </div>
@@ -386,8 +397,8 @@
                                 <img class="full-width img-responsive" src="img/397x300/01.jpg" alt="Portfolio Image">
                             </div>
                             <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                                <h3 class="color-white margin-b-5" data-translate="showcase.work3.title">El tamaño que necesites</h3>
+                                <p class="color-white margin-b-0" data-translate="showcase.work3.description">Nuestras soluciones son diseñadas para cumplir con las necesidades especificas de cada proyecto.</p>
                             </div>
                             <a class="content-wrapper-link" href="#"></a>
                         </div>
@@ -400,8 +411,8 @@
                                 <img class="full-width img-responsive" src="img/397x300/02.jpg" alt="Portfolio Image">
                             </div>
                             <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                                <h3 class="color-white margin-b-5" data-translate="showcase.work4.title">Gabinetes 3D</h3>
+                                <p class="color-white margin-b-0" data-translate="showcase.work4.description">Para que tu proyecto se vea como lo imaginas, diseñamos en 3D los gabinetes y elementos que lo complementan.</p>
                             </div>
                             <a class="content-wrapper-link" href="#"></a>
                         </div>
@@ -414,8 +425,8 @@
                                 <img class="full-width img-responsive" src="img/397x300/03.jpg" alt="Portfolio Image">
                             </div>
                             <div class="work-content">
-                                <h3 class="color-white margin-b-5">Clean Design</h3>
-                                <p class="color-white margin-b-0">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                                <h3 class="color-white margin-b-5" data-translate="showcase.work5.title">Diseño de punta</h3>
+                                <p class="color-white margin-b-0" data-translate="showcase.work5.description">Utilizamos software de ultima generacion para diseñar nuestras soluciones, asegurando la mejor calidad y rendimiento.</p>
                             </div>
                             <a class="content-wrapper-link" href="#"></a>
                         </div>
@@ -435,9 +446,9 @@
                     <div class="ver-center">
                         <div class="ver-center-aligned">
                             <div class="promo-section-col">
-                                <h2>Trabaja con nosotros</h2>
-                                <p>Si tenes una idea innovadora y queres llevarla a la realidad, no dudes en contactarnos. Queremos poner el poder del silicio en tus manos.</p>
-                                <p>No te quedes sin la oportunidad de traer al plano fisico tu visión del futuro, ya sea para tu empresa o proyecto personal. ¡Contáctanos hoy mismo!</p>
+                                <h2 data-translate="cta.title">Trabaja con nosotros</h2>
+                                <p data-translate="cta.description1">Si tenes una idea innovadora y queres llevarla a la realidad, no dudes en contactarnos. Queremos poner el poder del silicio en tus manos.</p>
+                                <p data-translate="cta.description2">No te quedes sin la oportunidad de traer al plano fisico tu visión del futuro, ya sea para tu empresa o proyecto personal. ¡Contáctanos hoy mismo!</p>
                             </div>
                         </div>
                     </div>
@@ -463,7 +474,6 @@
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">About</a></li>
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">Careers</a></li>
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">Contact</a></li>
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">Terms</a></li>
                             </ul>
                             <!-- End List -->
                         </div>
@@ -475,12 +485,12 @@
                             <!-- End List -->
                         </div>
                         <div class="col-sm-5 sm-margin-b-30">
-                            <h2 class="color-white">Mandanos un mensaje</h2>
-                            <input type="text" class="form-control footer-input margin-b-20" placeholder="Nombre" required>
-                            <input type="email" class="form-control footer-input margin-b-20" placeholder="Email" required>
-                            <input type="text" class="form-control footer-input margin-b-20" placeholder="Telefono" required>
-                            <textarea class="form-control footer-input margin-b-30" rows="6" placeholder="Mensaje" required></textarea>
-                            <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase">Enviar</button>
+                            <h2 class="color-white" data-translate="contact.title">Mandanos un mensaje</h2>
+                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.name" placeholder="Nombre" required>
+                            <input type="email" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.email" placeholder="Email" required>
+                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.phone" placeholder="Telefono" required>
+                            <textarea class="form-control footer-input margin-b-30" rows="6" data-translate-placeholder="contact.message" placeholder="Mensaje" required></textarea>
+                            <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" data-translate="contact.send">Enviar</button>
                         </div>
                     </div>
                     <!--// end row -->
@@ -495,7 +505,7 @@
                         <img class="footer-logo" src="img/logo.png" alt="BARESAND Logo">
                     </div>
                     <div class="col-xs-6 text-right">
-                        <p class="margin-b-0">&copy; 2025 BARESAND. Todos los derechos reservados.</p>
+                        <p class="margin-b-0" data-translate="footer.copyright">&copy; 2025 BARESAND. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>
@@ -506,7 +516,7 @@
         <!--========== END FOOTER ==========-->
 
         <!-- Back To Top -->
-        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top" data-translate="common.top">Top</a>
 
         <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
         <!-- CORE PLUGINS -->
@@ -531,6 +541,393 @@
 
         <!-- Carousel Fix Script - Must be last -->
         <script src="js/carousel-fix.js" type="text/javascript"></script>
+
+        <!-- Language Translation System -->
+        <style>
+        .language-switch-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            height: auto;
+            white-space: nowrap;
+        }
+        
+        .language-switch-container:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .language-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: inherit;
+            transition: opacity 0.3s ease;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .language-label.active {
+            opacity: 1;
+        }
+        
+        .language-label.inactive {
+            opacity: 0.6;
+        }
+        
+        .language-switch {
+            position: relative;
+            display: inline-block;
+            width: 28px;
+            height: 14px;
+            vertical-align: middle;
+        }
+        
+        .language-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 10px;
+            width: 10px;
+            left: 1px;
+            bottom: 1px;
+            background: #fff;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        input:checked + .slider {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(14px);
+        }
+        
+        .slider:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        </style>
+
+        <script>
+        // Translation object with all text content
+        const translations = {
+            es: {
+                nav: {
+                    home: "Home",
+                    about: "About", 
+                    faq: "FAQ",
+                    contact: "Contact"
+                },
+                hero: {
+                    title1: "EL PODER DEL SILICIO A TU SERVICIO",
+                    subtitle1: "SOLUCIONES TECNOLOGICAS PARA TU NEGOCIO",
+                    title2: "SOMOS EL GRANITO DE ARENA QUE LE FALTABA A TU PROYECTO",
+                    subtitle2: "NO PIERDAS MAS TIEMPO HACE DE TU IDEA UNA REALIDAD"
+                },
+                services: {
+                    hardware: {
+                        title: "Hardware",
+                        description: "Forjamos la materia prima de los sueños digitales, cimientos tangibles de lo imposible"
+                    },
+                    software: {
+                        title: "Software", 
+                        description: "Código que respira vida digital, transformando ideas en experiencias interactivas"
+                    },
+                    firmware: {
+                        title: "Firmware",
+                        description: "El alma invisible que despierta al silicio, puente eterno entre materia y mente"
+                    },
+                    ai: {
+                        title: "Inteligencia Artificial",
+                        description: "Sabiduría que emerge del silicio, aprendiendo de cada dato para revelar futuros posibles"
+                    },
+                    design3d: {
+                        title: "Diseño 3D",
+                        description: "Esculpimos realidades fuera de las 2 dimensiones del papel, dando forma a lo inimaginable en cualquier proyecto"
+                    },
+                    specialized: {
+                        title: "Sectores Especializados",
+                        description: "Desde electromedicina y agrotecnología hasta la industria 4.0, adaptamos nuestra innovación a cada ecosistema"
+                    }
+                },
+                portfolio: {
+                    title: "Trabajos Realizados",
+                    description: "Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito"
+                },
+                projects: {
+                    automation: {
+                        title: "Automatizacion de Cultivos",
+                        category: "Agrotecnología", 
+                        description: "Los controladores automáticos son clave en el cultivo de hongos y sistemas hidropónicos, ya que permiten regular las condiciones microclimáticas, gestionar los ciclos de ventilación y humedad de manera autónoma y, con estos parámetros controlados, asegurar un ambiente ideal que acelera el crecimiento y mejora la calidad del producto final."
+                    },
+                    counter: {
+                        title: "Contador de Vehículos",
+                        category: "Transporte",
+                        description: "Los contadores son centrales en la planificación de obras, ya que permiten monitorear el comportamiento de los flujos de tránsito en determinadas rutas o corredores y, con esos resultados, conocer las demandas puntuales para abordar la alternativa más acorde."
+                    },
+                    detector: {
+                        title: "Detector de fallas electricas",
+                        category: "Inteligencia Artificial",
+                        description: "El detector de fallas eléctricas es un sistema de computer vision que analiza el estado de la red eléctrica en imagenes captadas por drones y detecta posibles problemas o anomalías. Su función es identificar y localizar fallas eléctricas en lineas de media y alta tensión, lo que permite prevenir interrupciones, reducir los costos de mantenimiento y mejorar la eficiencia energética."
+                    }
+                },
+                showcase: {
+                    title: "Showcase",
+                    description: "Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito",
+                    work1: {
+                        title: "Diseño de Hardware",
+                        description: "Diseñamos hardware para diversas aplicaciones, desde 0 con software especializado y de ultima generacion."
+                    },
+                    work2: {
+                        title: "PCB",
+                        description: "Nuestras placas de circuito impreso son diseñadas para cumplir con las necesidades especificas de cada proyecto, desde sistemas embebidos hasta dispositivos industriales."
+                    },
+                    work3: {
+                        title: "El tamaño que necesites",
+                        description: "Nuestras soluciones son diseñadas para cumplir con las necesidades especificas de cada proyecto."
+                    },
+                    work4: {
+                        title: "Gabinetes 3D",
+                        description: "Para que tu proyecto se vea como lo imaginas, diseñamos en 3D los gabinetes y elementos que lo complementan."
+                    },
+                    work5: {
+                        title: "Diseño de punta",
+                        description: "Utilizamos software de ultima generacion para diseñar nuestras soluciones, asegurando la mejor calidad y rendimiento."
+                    }
+                },
+                cta: {
+                    title: "Trabaja con nosotros",
+                    description1: "Si tenes una idea innovadora y queres llevarla a la realidad, no dudes en contactarnos. Queremos poner el poder del silicio en tus manos.",
+                    description2: "No te quedes sin la oportunidad de traer al plano fisico tu visión del futuro, ya sea para tu empresa o proyecto personal. ¡Contáctanos hoy mismo!"
+                },
+                contact: {
+                    title: "Mandanos un mensaje",
+                    name: "Nombre",
+                    email: "Email", 
+                    phone: "Telefono",
+                    message: "Mensaje",
+                    send: "Enviar"
+                },
+                footer: {
+                    copyright: "© 2025 BARESAND. Todos los derechos reservados."
+                },
+                common: {
+                    explore: "Explore",
+                    readmore: "Read More",
+                    top: "Top"
+                }
+            },
+            en: {
+                nav: {
+                    home: "Home",
+                    about: "About",
+                    faq: "FAQ", 
+                    contact: "Contact"
+                },
+                hero: {
+                    title1: "THE POWER OF SILICON AT YOUR SERVICE",
+                    subtitle1: "TECHNOLOGICAL SOLUTIONS FOR YOUR BUSINESS",
+                    title2: "WE ARE THE GRAIN OF SAND YOUR PROJECT WAS MISSING",
+                    subtitle2: "DON'T WASTE MORE TIME, MAKE YOUR IDEA A REALITY"
+                },
+                services: {
+                    hardware: {
+                        title: "Hardware",
+                        description: "We forge the raw material of digital dreams, tangible foundations of the impossible"
+                    },
+                    software: {
+                        title: "Software",
+                        description: "Code that breathes digital life, transforming ideas into interactive experiences"
+                    },
+                    firmware: {
+                        title: "Firmware", 
+                        description: "The invisible soul that awakens silicon, eternal bridge between matter and mind"
+                    },
+                    ai: {
+                        title: "Artificial Intelligence",
+                        description: "Wisdom that emerges from silicon, learning from every data point to reveal possible futures"
+                    },
+                    design3d: {
+                        title: "3D Design",
+                        description: "We sculpt realities beyond the 2 dimensions of paper, shaping the unimaginable in any project"
+                    },
+                    specialized: {
+                        title: "Specialized Sectors", 
+                        description: "From electromedicine and agrotechnology to industry 4.0, we adapt our innovation to each ecosystem"
+                    }
+                },
+                portfolio: {
+                    title: "Completed Works",
+                    description: "Focused on innovation and excellence, our projects are testimony to our commitment to technology and success"
+                },
+                projects: {
+                    automation: {
+                        title: "Crop Automation",
+                        category: "Agrotechnology",
+                        description: "Automatic controllers are key in mushroom cultivation and hydroponic systems, as they allow regulating microclimatic conditions, managing ventilation and humidity cycles autonomously and, with these controlled parameters, ensuring an ideal environment that accelerates growth and improves the quality of the final product."
+                    },
+                    counter: {
+                        title: "Vehicle Counter",
+                        category: "Transportation",
+                        description: "Counters are central in construction planning, as they allow monitoring the behavior of traffic flows on certain routes or corridors and, with those results, knowing the specific demands to address the most appropriate alternative."
+                    },
+                    detector: {
+                        title: "Electrical Fault Detector",
+                        category: "Artificial Intelligence",
+                        description: "The electrical fault detector is a computer vision system that analyzes the state of the electrical grid in images captured by drones and detects possible problems or anomalies. Its function is to identify and locate electrical faults in medium and high voltage lines, which allows preventing interruptions, reducing maintenance costs and improving energy efficiency."
+                    }
+                },
+                showcase: {
+                    title: "Showcase",
+                    description: "Focused on innovation and excellence, our projects are testimony to our commitment to technology and success",
+                    work1: {
+                        title: "Hardware Design",
+                        description: "We design hardware for diverse applications, from scratch with specialized and cutting-edge software."
+                    },
+                    work2: {
+                        title: "PCB",
+                        description: "Our printed circuit boards are designed to meet the specific needs of each project, from embedded systems to industrial devices."
+                    },
+                    work3: {
+                        title: "Any size you need",
+                        description: "Our solutions are designed to meet the specific needs of each project."
+                    },
+                    work4: {
+                        title: "3D Enclosures",
+                        description: "So your project looks exactly as you imagine it, we design in 3D the enclosures and elements that complement it."
+                    },
+                    work5: {
+                        title: "Cutting-edge Design",
+                        description: "We use the latest generation software to design our solutions, ensuring the best quality and performance."
+                    }
+                },
+                cta: {
+                    title: "Work with us",
+                    description1: "If you have an innovative idea and want to make it a reality, don't hesitate to contact us. We want to put the power of silicon in your hands.",
+                    description2: "Don't miss the opportunity to bring your vision of the future to the physical plane, whether for your company or personal project. Contact us today!"
+                },
+                contact: {
+                    title: "Send us a message",
+                    name: "Name",
+                    email: "Email",
+                    phone: "Phone", 
+                    message: "Message",
+                    send: "Send"
+                },
+                footer: {
+                    copyright: "© 2025 BARESAND. All rights reserved."
+                },
+                common: {
+                    explore: "Explore",
+                    readmore: "Read More",
+                    top: "Top"
+                }
+            }
+        };
+
+        // Current language state
+        let currentLanguage = localStorage.getItem('language') || 'es';
+
+        // Function to get nested translation value
+        function getTranslation(key, lang) {
+            const keys = key.split('.');
+            let value = translations[lang];
+            
+            for (const k of keys) {
+                if (value && value[k]) {
+                    value = value[k];
+                } else {
+                    return key; // Return original key if translation not found
+                }
+            }
+            
+            return value;
+        }
+
+        // Function to translate all elements
+        function translatePage(language) {
+            // Translate regular text elements
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = getTranslation(key, language);
+                
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else {
+                    element.innerHTML = translation;
+                }
+            });
+
+            // Translate placeholder elements  
+            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                const translation = getTranslation(key, language);
+                element.placeholder = translation;
+            });
+
+            // Update language switch
+            const languageToggle = document.getElementById('languageToggle');
+            const esLabel = document.querySelector('.es-label');
+            const enLabel = document.querySelector('.en-label');
+            
+            if (languageToggle && esLabel && enLabel) {
+                if (language === 'es') {
+                    languageToggle.checked = false;
+                    esLabel.classList.add('active');
+                    esLabel.classList.remove('inactive');
+                    enLabel.classList.add('inactive');
+                    enLabel.classList.remove('active');
+                } else {
+                    languageToggle.checked = true;
+                    enLabel.classList.add('active');
+                    enLabel.classList.remove('inactive');
+                    esLabel.classList.add('inactive');
+                    esLabel.classList.remove('active');
+                }
+            }
+
+            // Update HTML lang attribute
+            document.documentElement.lang = language;
+            
+            // Save language preference
+            localStorage.setItem('language', language);
+            currentLanguage = language;
+        }
+
+        // Function to toggle language
+        function toggleLanguage() {
+            const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            translatePage(newLanguage);
+        }
+
+        // Initialize page with saved language
+        document.addEventListener('DOMContentLoaded', function() {
+            translatePage(currentLanguage);
+        });
+        </script>
 
         <!-- Prevent all links with href="#" from scrolling to top (for placeholder links) -->
         <script>

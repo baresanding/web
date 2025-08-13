@@ -65,10 +65,21 @@
                     <div class="collapse navbar-collapse nav-collapse">
                         <div class="menu-container">
                             <ul class="navbar-nav navbar-nav-right">
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="about.html">About</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="faq.html">FAQ</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="index.html" data-translate="nav.home">Home</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="about.html" data-translate="nav.about">About</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="faq.html" data-translate="nav.faq">FAQ</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="contact.html" data-translate="nav.contact">Contact</a></li>
+                                <!-- Language Switcher -->
+                                <li class="nav-item">
+                                    <div class="nav-item-child language-switch-container">
+                                        <span class="language-label es-label">ES</span>
+                                        <label class="language-switch">
+                                            <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
+                                            <span class="slider"></span>
+                                        </label>
+                                        <span class="language-label en-label">EN</span>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -82,8 +93,8 @@
         <!--========== PARALLAX ==========-->
         <div class="parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/02.jpg">
             <div class="parallax-content container">
-                <h1 class="carousel-title">Contacto</h1>
-                <p>Nuestro equipo esta disponible para responder tus preguntas y brindarte asistencia. <br/> Si tenes alguna duda, no dudes en contactarnos.</p>
+                <h1 class="carousel-title" data-translate="contact.hero.title">Contacto</h1>
+                <p data-translate="contact.hero.description">Nuestro equipo esta disponible para responder tus preguntas y brindarte asistencia. <br/> Si tenes alguna duda, no dudes en contactarnos.</p>
             </div>
         </div>
         <!--========== PARALLAX ==========-->
@@ -96,8 +107,8 @@
                     <!-- Contact List -->
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
-                            <h3><a href="#">Corrientes, Argentina</a> <span class="text-uppercase margin-l-20">Head Office</span></h3>
-                            <p>Lugar de nacimiento de 2 de los fundadores. <br/> Actual HQ de la empresa.</p>
+                            <h3><a href="#">Corrientes, Argentina</a> <span class="text-uppercase margin-l-20" data-translate="contact.office.type">Head Office</span></h3>
+                            <p data-translate="contact.office.description">Lugar de nacimiento de 2 de los fundadores. <br/> Actual HQ de la empresa.</p>
                             <ul class="list-unstyled contact-list">
                                 <li><i class="margin-r-10 color-base icon-call-out"></i> +54 379 415 1325</li>
                                 <li><i class="margin-r-10 color-base icon-envelope"></i> baresand.ing@gmail.com</li>
@@ -156,7 +167,6 @@
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">About</a></li>
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">Careers</a></li>
                                 <li class="footer-list-item"><a class="footer-list-link" href="#">Contact</a></li>
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">Terms</a></li>
                             </ul>
                             <!-- End List -->
                         </div>
@@ -168,12 +178,12 @@
                             <!-- End List -->
                         </div>
                         <div class="col-sm-5 sm-margin-b-30">
-                            <h2 class="color-white">Send Us A Note</h2>
-                            <input type="text" class="form-control footer-input margin-b-20" placeholder="Name" required>
-                            <input type="email" class="form-control footer-input margin-b-20" placeholder="Email" required>
-                            <input type="text" class="form-control footer-input margin-b-20" placeholder="Phone" required>
-                            <textarea class="form-control footer-input margin-b-30" rows="6" placeholder="Message" required></textarea>
-                            <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase">Submit</button>
+                            <h2 class="color-white" data-translate="contact.form.title">Send Us A Note</h2>
+                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.name" placeholder="Name" required>
+                            <input type="email" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.email" placeholder="Email" required>
+                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.phone" placeholder="Phone" required>
+                            <textarea class="form-control footer-input margin-b-30" rows="6" data-translate-placeholder="contact.form.message" placeholder="Message" required></textarea>
+                            <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" data-translate="contact.form.send">Submit</button>
                         </div>
                     </div>
                     <!--// end row -->
@@ -188,7 +198,7 @@
                         <img class="footer-logo" src="img/logo.png" alt="BARESAND Logo">
                     </div>
                     <div class="col-xs-6 text-right">
-                        <p class="margin-b-0">&copy; 2025 BARESAND. Todos los derechos reservados.</p>
+                        <p class="margin-b-0" data-translate="footer.copyright">&copy; 2025 BARESAND. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>
@@ -199,7 +209,7 @@
         <!--========== END FOOTER ==========-->
 
         <!-- Back To Top -->
-        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top" data-translate="common.top">Top</a>
 
         <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
         <!-- CORE PLUGINS -->
@@ -232,6 +242,244 @@
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U&amp;callback=initMap" async defer></script>
 
+        <!-- Language Translation System -->
+        <style>
+        .language-switch-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            height: auto;
+            white-space: nowrap;
+        }
+        
+        .language-switch-container:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .language-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: inherit;
+            transition: opacity 0.3s ease;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .language-label.active {
+            opacity: 1;
+        }
+        
+        .language-label.inactive {
+            opacity: 0.6;
+        }
+        
+        .language-switch {
+            position: relative;
+            display: inline-block;
+            width: 28px;
+            height: 14px;
+            vertical-align: middle;
+        }
+        
+        .language-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 10px;
+            width: 10px;
+            left: 1px;
+            bottom: 1px;
+            background: #fff;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        input:checked + .slider {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(14px);
+        }
+        
+        .slider:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        </style>
+
+        <script>
+        // Translation object with all text content
+        const translations = {
+            es: {
+                nav: {
+                    home: "Home",
+                    about: "About", 
+                    faq: "FAQ",
+                    contact: "Contact"
+                },
+                contact: {
+                    hero: {
+                        title: "Contacto",
+                        description: "Nuestro equipo esta disponible para responder tus preguntas y brindarte asistencia. Si tenes alguna duda, no dudes en contactarnos."
+                    },
+                    office: {
+                        type: "Head Office",
+                        description: "Lugar de nacimiento de 2 de los fundadores. Actual HQ de la empresa."
+                    },
+                    form: {
+                        title: "Mandanos un mensaje",
+                        name: "Nombre",
+                        email: "Email",
+                        phone: "Telefono",
+                        message: "Mensaje",
+                        send: "Enviar"
+                    }
+                },
+                footer: {
+                    copyright: "© 2025 BARESAND. Todos los derechos reservados."
+                },
+                common: {
+                    top: "Top"
+                }
+            },
+            en: {
+                nav: {
+                    home: "Home",
+                    about: "About",
+                    faq: "FAQ",
+                    contact: "Contact"
+                },
+                contact: {
+                    hero: {
+                        title: "Contact",
+                        description: "Our team is available to answer your questions and provide assistance. If you have any questions, don't hesitate to contact us."
+                    },
+                    office: {
+                        type: "Head Office",
+                        description: "Birthplace of 2 of the founders. Current company headquarters."
+                    },
+                    form: {
+                        title: "Send us a message",
+                        name: "Name",
+                        email: "Email",
+                        phone: "Phone",
+                        message: "Message",
+                        send: "Send"
+                    }
+                },
+                footer: {
+                    copyright: "© 2025 BARESAND. All rights reserved."
+                },
+                common: {
+                    top: "Top"
+                }
+            }
+        };
+
+        // Current language state
+        let currentLanguage = localStorage.getItem('language') || 'es';
+
+        // Function to get nested translation value
+        function getTranslation(key, lang) {
+            const keys = key.split('.');
+            let value = translations[lang];
+            
+            for (const k of keys) {
+                if (value && value[k]) {
+                    value = value[k];
+                } else {
+                    return key; // Return original key if translation not found
+                }
+            }
+            
+            return value;
+        }
+
+        // Function to translate all elements
+        function translatePage(language) {
+            // Translate regular text elements
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = getTranslation(key, language);
+                
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else {
+                    element.innerHTML = translation;
+                }
+            });
+
+            // Translate placeholder elements  
+            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                const translation = getTranslation(key, language);
+                element.placeholder = translation;
+            });
+
+            // Update language switch
+            const languageToggle = document.getElementById('languageToggle');
+            const esLabel = document.querySelector('.es-label');
+            const enLabel = document.querySelector('.en-label');
+            
+            if (languageToggle && esLabel && enLabel) {
+                if (language === 'es') {
+                    languageToggle.checked = false;
+                    esLabel.classList.add('active');
+                    esLabel.classList.remove('inactive');
+                    enLabel.classList.add('inactive');
+                    enLabel.classList.remove('active');
+                } else {
+                    languageToggle.checked = true;
+                    enLabel.classList.add('active');
+                    enLabel.classList.remove('inactive');
+                    esLabel.classList.add('inactive');
+                    esLabel.classList.remove('active');
+                }
+            }
+
+            // Update HTML lang attribute
+            document.documentElement.lang = language;
+            
+            // Save language preference
+            localStorage.setItem('language', language);
+            currentLanguage = language;
+        }
+
+        // Function to toggle language
+        function toggleLanguage() {
+            const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            translatePage(newLanguage);
+        }
+
+        // Initialize page with saved language
+        document.addEventListener('DOMContentLoaded', function() {
+            translatePage(currentLanguage);
+        });
+        </script>
 
     </body>
     <!-- END BODY -->
