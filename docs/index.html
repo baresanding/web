@@ -31,6 +31,9 @@
 
         <!-- THEME STYLES -->
         <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- MOBILE OPTIMIZATIONS -->
+        <link href="css/mobile-optimizations.css" rel="stylesheet" type="text/css"/>
 
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/png" href="img/logo-short.png"/>
@@ -104,11 +107,11 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <video class="video-background" autoplay muted loop>
+                    <video class="video-background" autoplay muted loop playsinline webkit-playsinline preload="metadata">
                         <source src="videos/video1.mp4" type="video/mp4">
                         <source src="videos/video1.webm" type="video/webm">
                         <!-- Fallback image for browsers that don't support video -->
-                        <img src="img/1920x1080/01.jpg" alt="Video fallback">
+                        <img src="img/1920x1080/01.jpg" alt="Video fallback" class="video-fallback">
                     </video>
                     <div class="video-overlay"></div>
                     <div class="container">
@@ -121,11 +124,11 @@
                     </div>
                 </div>
                 <div class="item">
-                    <video class="video-background" autoplay muted loop>
+                    <video class="video-background" autoplay muted loop playsinline webkit-playsinline preload="metadata">
                         <source src="videos/video2.mp4" type="video/mp4">
                         <source src="videos/video2.webm" type="video/webm">
                         <!-- Fallback image for browsers that don't support video -->
-                        <img src="img/1920x1080/02.jpg" alt="Video fallback">
+                        <img src="img/1920x1080/02.jpg" alt="Video fallback" class="video-fallback">
                     </video>
                     <div class="video-overlay"></div>
                     <div class="container">
@@ -591,6 +594,9 @@
 
         <!-- Carousel Fix Script - Must be last -->
         <script src="js/carousel-fix.js" type="text/javascript"></script>
+        
+        <!-- Mobile Video Optimizer - Must be after carousel fix -->
+        <script src="js/mobile-video-optimizer.js" type="text/javascript"></script>
 
         <!-- Language Translation System -->
         <style>
