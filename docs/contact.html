@@ -108,7 +108,6 @@
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
                             <h3><a href="#">Corrientes, Argentina</a> <span class="text-uppercase margin-l-20" data-translate="contact.office.type">Head Office</span></h3>
-                            <p data-translate="contact.office.description">Lugar de nacimiento de 2 de los fundadores. <br/> Actual HQ de la empresa.</p>
                             <ul class="list-unstyled contact-list">
                                 <li><i class="margin-r-10 color-base icon-call-out"></i> +54 379 415 1325</li>
                                 <li><i class="margin-r-10 color-base icon-envelope"></i> baresand.ing@gmail.com</li>
@@ -170,20 +169,73 @@
                             </ul>
                             <!-- End List -->
                         </div>
+
                         <div class="col-sm-4 sm-margin-b-30">
-                            <!-- List -->
+                           <!-- List -->
                             <ul class="list-unstyled footer-list">
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">Instagram</a></li>
+                                <li class="footer-list-item">
+                                    <a class="footer-list-link" 
+                                    href="https://www.instagram.com/bare.sand/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+                                            alt="Instagram" 
+                                            width="20" 
+                                            height="20">
+                                            Instagram
+                                    </a>
+                                </li>
                             </ul>
-                            <!-- End List -->
+
+                            <!-- Botón pequeño WhatsApp -->
+                            <a href="https://wa.me/5493794688973?text=Hola%20quiero%20más%20información" 
+                            target="_blank" 
+                            style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                                    alt="WhatsApp" 
+                                    width="20" 
+                                    height="20">
+                                Lucas M.
+                            </a>
+                            <p></p>
+
+                            <!-- Botón pequeño WhatsApp sin fondo -->
+                            <a href="https://wa.me/5493794151325?text=Hola%20quiero%20más%20información" 
+                            target="_blank" 
+                            style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                                    alt="WhatsApp" 
+                                    width="20" 
+                                    height="20">
+                                Lautaro S.
+                            </a>
+                            <p></p>
+
+                            <!-- Botón pequeño WhatsApp -->
+                            <a href="https://wa.me/5493624649174?text=Hola%20quiero%20más%20información" 
+                            target="_blank" 
+                            style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                                    alt="WhatsApp" 
+                                    width="20" 
+                                    height="20">
+                                Lautaro Q.
+                            </a>
                         </div>
+
                         <div class="col-sm-5 sm-margin-b-30">
-                            <h2 class="color-white" data-translate="contact.form.title">Send Us A Note</h2>
-                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.name" placeholder="Name" required>
-                            <input type="email" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.email" placeholder="Email" required>
-                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.phone" placeholder="Phone" required>
-                            <textarea class="form-control footer-input margin-b-30" rows="6" data-translate-placeholder="contact.form.message" placeholder="Message" required></textarea>
-                            <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" data-translate="contact.form.send">Submit</button>
+                            <h2 class="color-white" data-translate="contact.form.title">Mandanos un mensaje</h2>
+
+                            <!-- Formspree Form -->
+                            <form action="https://formspree.io/f/xldlvrrv" method="POST">
+                                <input type="text" name="name" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.name" placeholder="Nombre" required>
+                                <input type="email" name="email" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.email" placeholder="Email" required>
+                                <input type="text" name="phone" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.form.phone" placeholder="Teléfono">
+                                <textarea name="message" class="form-control footer-input margin-b-30" rows="6" data-translate-placeholder="contact.form.message" placeholder="Mensaje" required></textarea>
+                                <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" data-translate="contact.form.send">Enviar</button>
+                            </form>
+                            <!-- End Formspree Form -->
                         </div>
                     </div>
                     <!--// end row -->
@@ -202,9 +254,6 @@
                     </div>
                 </div>
             </div>
-                <!--// end row -->
-            </div>
-            <!-- End Copyright -->
         </footer>
         <!--========== END FOOTER ==========-->
 
@@ -357,14 +406,14 @@
                         phone: "Telefono",
                         message: "Mensaje",
                         send: "Enviar"
+                        }
+                    },
+                    footer: {
+                        copyright: "© 2025 BARESAND. Todos los derechos reservados."
+                    },
+                    common: {
+                        top: "Top"
                     }
-                },
-                footer: {
-                    copyright: "© 2025 BARESAND. Todos los derechos reservados."
-                },
-                common: {
-                    top: "Top"
-                }
             },
             en: {
                 nav: {
@@ -374,22 +423,22 @@
                     contact: "Contact"
                 },
                 contact: {
-                    hero: {
-                        title: "Contact",
-                        description: "Our team is available to answer your questions and provide assistance. If you have any questions, don't hesitate to contact us."
-                    },
-                    office: {
-                        type: "Head Office",
-                        description: "Birthplace of 2 of the founders. Current company headquarters."
-                    },
+                hero: {
+                    title: "Contact",
+                    description: "Our team is available to answer your questions and provide assistance. If you have any questions, don't hesitate to contact us."
+                },
+                office: {
+                    type: "Head Office",
+                    description: "Birthplace of 2 of the founders. Current company headquarters."
+                },
                     form: {
-                        title: "Send us a message",
-                        name: "Name",
-                        email: "Email",
-                        phone: "Phone",
-                        message: "Message",
-                        send: "Send"
-                    }
+                    title: "Send us a message",
+                    name: "Name",
+                    email: "Email",
+                    phone: "Phone",
+                    message: "Message",
+                    send: "Send"
+                }
                 },
                 footer: {
                     copyright: "© 2025 BARESAND. All rights reserved."
@@ -397,7 +446,7 @@
                 common: {
                     top: "Top"
                 }
-            }
+                }
         };
 
         // Current language state

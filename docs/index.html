@@ -29,6 +29,9 @@
 
         <!-- THEME STYLES -->
         <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- MOBILE OPTIMIZATIONS -->
+        <link href="css/mobile-optimizations.css" rel="stylesheet" type="text/css"/>
 
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/png" href="img/logo-short.png"/>
@@ -102,11 +105,11 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <video class="video-background" autoplay muted loop>
+                    <video class="video-background" autoplay muted loop playsinline webkit-playsinline preload="metadata">
                         <source src="videos/video1.mp4" type="video/mp4">
                         <source src="videos/video1.webm" type="video/webm">
                         <!-- Fallback image for browsers that don't support video -->
-                        <img src="img/1920x1080/01.jpg" alt="Video fallback">
+                        <img src="img/1920x1080/01.jpg" alt="Video fallback" class="video-fallback">
                     </video>
                     <div class="video-overlay"></div>
                     <div class="container">
@@ -115,16 +118,15 @@
                                 <h1 class="carousel-title" style="font-family: 'Montserrat', sans-serif; font-size: 60px;" data-translate="hero.title1">EL PODER DEL SILICIO A TU SERVICIO</h1>
                                 <p data-translate="hero.subtitle1">SOLUCIONES TECNOLOGICAS PARA TU NEGOCIO<br/></p></h1>
                             </div>
-                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase" data-translate="common.explore">Explore</a>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <video class="video-background" autoplay muted loop>
+                    <video class="video-background" autoplay muted loop playsinline webkit-playsinline preload="metadata">
                         <source src="videos/video2.mp4" type="video/mp4">
                         <source src="videos/video2.webm" type="video/webm">
                         <!-- Fallback image for browsers that don't support video -->
-                        <img src="img/1920x1080/02.jpg" alt="Video fallback">
+                        <img src="img/1920x1080/02.jpg" alt="Video fallback" class="video-fallback">
                     </video>
                     <div class="video-overlay"></div>
                     <div class="container">
@@ -133,7 +135,6 @@
                                 <h2 class="carousel-title" data-translate="hero.title2">SOMOS EL GRANITO DE ARENA<br/> QUE LE FALTABA A TU PROYECTO</h2>
                                 <p data-translate="hero.subtitle2">NO PIERDAS MAS TIEMPO HACE DE TU IDEA UNA REALIDAD<br/> </p>
                             </div>
-                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase" data-translate="common.explore">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -475,20 +476,73 @@
                             </ul>
                             <!-- End List -->
                         </div>
+
                         <div class="col-sm-4 sm-margin-b-30">
-                            <!-- List -->
+                           <!-- List -->
                             <ul class="list-unstyled footer-list">
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">Instagram</a></li>
+                                <li class="footer-list-item">
+                                    <a class="footer-list-link" 
+                                    href="https://www.instagram.com/bare.sand/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+                                            alt="Instagram" 
+                                            width="20" 
+                                            height="20">
+                                            Instagram
+                                    </a>
+                                </li>
                             </ul>
-                            <!-- End List -->
+
+                            <!-- Botón pequeño WhatsApp -->
+                            <a href="https://wa.me/5493794688973?text=Hola%20quiero%20más%20información" 
+                            target="_blank" 
+                            style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                                    alt="WhatsApp" 
+                                    width="20" 
+                                    height="20">
+                                Lucas M.
+                            </a>
+                            <p></p>
+
+                            <!-- Botón pequeño WhatsApp sin fondo -->
+                            <a href="https://wa.me/5493794151325?text=Hola%20quiero%20más%20información" 
+                            target="_blank" 
+                            style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                                    alt="WhatsApp" 
+                                    width="20" 
+                                    height="20">
+                                Lautaro S.
+                            </a>
+                            <p></p>
+
+                            <!-- Botón pequeño WhatsApp -->
+                            <a href="https://wa.me/5493624649174?text=Hola%20quiero%20más%20información" 
+                            target="_blank" 
+                            style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                                    alt="WhatsApp" 
+                                    width="20" 
+                                    height="20">
+                                Lautaro Q.
+                            </a>
                         </div>
+
                         <div class="col-sm-5 sm-margin-b-30">
                             <h2 class="color-white" data-translate="contact.title">Mandanos un mensaje</h2>
-                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.name" placeholder="Nombre" required>
-                            <input type="email" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.email" placeholder="Email" required>
-                            <input type="text" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.phone" placeholder="Telefono" required>
-                            <textarea class="form-control footer-input margin-b-30" rows="6" data-translate-placeholder="contact.message" placeholder="Mensaje" required></textarea>
-                            <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" data-translate="contact.send">Enviar</button>
+
+                            <!-- Formspree Form -->
+                            <form action="https://formspree.io/f/xldlvrrv" method="POST">
+                                <input type="text" name="name" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.name" placeholder="Nombre" required>
+                                <input type="email" name="email" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.email" placeholder="Email" required>
+                                <input type="text" name="phone" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.phone" placeholder="Teléfono">
+                                <textarea name="message" class="form-control footer-input margin-b-30" rows="6" data-translate-placeholder="contact.message" placeholder="Mensaje" required></textarea>
+                                <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" data-translate="contact.send">Enviar</button>
+                            </form>
+                            <!-- End Formspree Form -->
                         </div>
                     </div>
                     <!--// end row -->
@@ -507,11 +561,10 @@
                     </div>
                 </div>
             </div>
-                <!--// end row -->
-            </div>
-            <!-- End Copyright -->
         </footer>
         <!--========== END FOOTER ==========-->
+
+
 
         <!-- Back To Top -->
         <a href="javascript:void(0);" class="js-back-to-top back-to-top" data-translate="common.top">Top</a>
@@ -539,6 +592,9 @@
 
         <!-- Carousel Fix Script - Must be last -->
         <script src="js/carousel-fix.js" type="text/javascript"></script>
+        
+        <!-- Mobile Video Optimizer - Must be after carousel fix -->
+        <script src="js/mobile-video-optimizer.js" type="text/javascript"></script>
 
         <!-- Language Translation System -->
         <style>
@@ -641,34 +697,34 @@
                 },
                 hero: {
                     title1: "EL PODER DEL SILICIO A TU SERVICIO",
-                    subtitle1: "SOLUCIONES TECNOLOGICAS PARA TU NEGOCIO",
+                    subtitle1: "DISEÑO Y DESARROLLO DE HARDWARE, FIRMWARE, SOFTWARE Y SOLUCIONES DE IA A MEDIDA",
                     title2: "SOMOS EL GRANITO DE ARENA QUE LE FALTABA A TU PROYECTO",
-                    subtitle2: "NO PIERDAS MAS TIEMPO HACE DE TU IDEA UNA REALIDAD"
+                    subtitle2: "DE LA IDEA AL PRODUCTO FINAL, TE ACOMPAÑAMOS EN TODO EL PROCESO"
                 },
                 services: {
                     hardware: {
                         title: "Hardware",
-                        description: "Forjamos la materia prima de los sueños digitales, cimientos tangibles de lo imposible"
+                        description: "Diseñamos y fabricamos dispositivos electrónicos a medida, desde el esquema y diseño de PCB hasta el prototipado, pruebas y optimización para producción."
                     },
                     software: {
                         title: "Software", 
-                        description: "Código que respira vida digital, transformando ideas en experiencias interactivas"
+                        description: "Desarrollamos aplicaciones y plataformas para la gestión, monitoreo y control de equipos, integrando comunicación con hardware y bases de datos."
                     },
                     firmware: {
                         title: "Firmware",
-                        description: "El alma invisible que despierta al silicio, puente eterno entre materia y mente"
+                        description: "Programamos el núcleo lógico de los dispositivos, incluyendo sistemas operativos de tiempo real (RTOS), para lograr control preciso, confiabilidad y alto rendimiento."
                     },
                     ai: {
                         title: "Inteligencia Artificial",
-                        description: "Sabiduría que emerge del silicio, aprendiendo de cada dato para revelar futuros posibles"
+                        description: "Implementamos modelos y algoritmos de IA que procesan y analizan datos en tiempo real, mejorando la eficiencia y la toma de decisiones."
                     },
                     design3d: {
                         title: "Diseño 3D",
-                        description: "Esculpimos realidades fuera de las 2 dimensiones del papel, dando forma a lo inimaginable en cualquier proyecto"
+                        description: "Modelamos piezas, carcasas y prototipos en 3D listos para impresión o fabricación, asegurando precisión dimensional y funcionalidad."
                     },
                     specialized: {
                         title: "Sectores Especializados",
-                        description: "Desde electromedicina y agrotecnología hasta la industria 4.0, adaptamos nuestra innovación a cada ecosistema"
+                        description: "Adaptamos nuestras soluciones a industrias como electromedicina, agrotecnología e industria 4.0, cumpliendo con estándares técnicos y normativos."
                     }
                 },
                 portfolio: {
@@ -747,34 +803,34 @@
                 },
                 hero: {
                     title1: "THE POWER OF SILICON AT YOUR SERVICE",
-                    subtitle1: "TECHNOLOGICAL SOLUTIONS FOR YOUR BUSINESS",
+                    subtitle1: "CUSTOM DESIGN AND DEVELOPMENT OF HARDWARE, FIRMWARE, SOFTWARE, AND AI SOLUTIONS",
                     title2: "WE ARE THE GRAIN OF SAND YOUR PROJECT WAS MISSING",
-                    subtitle2: "DON'T WASTE MORE TIME, MAKE YOUR IDEA A REALITY"
+                    subtitle2: "FROM IDEA TO FINAL PRODUCT, WE SUPPORT YOU THROUGH EVERY STEP"
                 },
                 services: {
                     hardware: {
                         title: "Hardware",
-                        description: "We forge the raw material of digital dreams, tangible foundations of the impossible"
+                        description: "We design and manufacture custom electronic devices, from schematic and PCB design to prototyping, testing, and optimization for production."
                     },
                     software: {
-                        title: "Software",
-                        description: "Code that breathes digital life, transforming ideas into interactive experiences"
+                        title: "Software", 
+                        description: "We develop applications and platforms for equipment management, monitoring, and control, integrating communication with hardware and databases."
                     },
                     firmware: {
-                        title: "Firmware", 
-                        description: "The invisible soul that awakens silicon, eternal bridge between matter and mind"
+                        title: "Firmware",
+                        description: "We program the core logic of devices, including real-time operating systems (RTOS), to ensure precise control, reliability, and high performance."
                     },
                     ai: {
                         title: "Artificial Intelligence",
-                        description: "Wisdom that emerges from silicon, learning from every data point to reveal possible futures"
+                        description: "We implement AI models and algorithms that process and analyze data in real time, improving efficiency and decision-making."
                     },
                     design3d: {
                         title: "3D Design",
-                        description: "We sculpt realities beyond the 2 dimensions of paper, shaping the unimaginable in any project"
+                        description: "We create 3D models for parts, enclosures, and prototypes ready for printing or manufacturing, ensuring dimensional accuracy and functionality."
                     },
                     specialized: {
-                        title: "Specialized Sectors", 
-                        description: "From electromedicine and agrotechnology to industry 4.0, we adapt our innovation to each ecosystem"
+                        title: "Specialized Sectors",
+                        description: "We tailor our solutions to industries such as electromedicine, agrotechnology, and Industry 4.0, meeting technical and regulatory standards."
                     }
                 },
                 portfolio: {
