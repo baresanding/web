@@ -807,6 +807,15 @@ fieldset[disabled] .btn-theme {
     line-height: 1.4;
     padding: 12px 12px 12px 15px;
   }
+  
+  /* Language switch container - keep white color on mobile */
+  .header .language-switch-container {
+    color: #fff !important;
+  }
+  
+  .header .language-switch-container .language-label {
+    color: #fff !important;
+  }
   .header .nav-item-hover:after {
     position: absolute;
     top: 19px;
@@ -1714,4 +1723,15 @@ fieldset[disabled] .btn-theme {
 .video-carousel .carousel-indicators li {
     pointer-events: auto !important;
     cursor: pointer;
+}
+
+/* Language switch mobile fix - ensure proper visibility on mobile */
+@media (max-width: 991px) {
+    .header .language-switch-container {
+        color: #515769 !important;
+    }
+    
+    .header .language-switch-container .language-label {
+        color: #515769 !important;
+    }
 }
