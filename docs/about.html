@@ -220,68 +220,6 @@
         </div>
          End Service -->
        
-        <!-- Team
-             Temporary toggle: set SHOW_ABOUT_TEAM to true near the bottom of this file to re-enable. -->
-        <div id="about-team" class="bg-color-sky-light" hidden>
-            <div class="content-lg container">
-                <div class="row margin-b-40">
-                    <div class="col-sm-6">
-                        <h2 data-translate="about.team.title">Conoce a nuestro equipo</h2>
-                        <p data-translate="about.team.description">Nuestro equipo está compuesto por 3 ingenieros apasionados egresados de la Universidad Nacional del Nordeste, que trabajan juntos para crear productos innovadores y de alta calidad.</p>
-                    </div>
-                </div>
-                <!--// end row -->
-
-                <div class="row">
-                    <!-- Team -->
-                    <div class="col-sm-4 sm-margin-b-50">
-                        <div class="bg-color-white margin-b-20">
-                            <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                                <img class="img-responsive" src="img/770x860/01.png" alt="Team Image">
-                            </div>
-                        </div>
-                        <h4><a href="#">Lucas Monzon Languasco</a> <span class="text-uppercase margin-l-20" data-translate="about.team.founder">Founder</span></h4>
-                        <p data-translate="about.team.lucas.description">Ingeniero en electronica. Especialista en sistemas embebidos.</p>
-                        <a class="link" href="#" data-translate="common.readmore">Read More</a>
-                    </div>
-                    <!-- End Team -->
-
-                    <!-- Team -->
-                    <div class="col-sm-4 sm-margin-b-50">
-                        <div class="bg-color-white margin-b-20">
-                            <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                                <img class="img-responsive" src="img/770x860/02.png" alt="Team Image">
-                            </div>
-                        </div>
-                        <h4><a href="#">Lautaro Quarin</a> <span class="text-uppercase margin-l-20" data-translate="about.team.founder">Founder</span></h4>
-                        <p data-translate="about.team.quarin.description">Ingeniero en electronica. </p>
-                        <a class="link" href="#" data-translate="common.readmore">Read More</a>
-                    </div>
-                    <!-- End Team -->
-
-                    <!-- Team -->
-                    <div class="col-sm-4 sm-margin-b-50">
-                        <div class="bg-color-white margin-b-20">
-                            <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                                <img class="img-responsive" src="img/770x860/03.png" alt="Team Image">
-                            </div>
-                        </div>
-                        <h4><a href="#">Lautaro Scheihing</a> <span class="text-uppercase margin-l-20" data-translate="about.team.founder">Founder</span></h4>
-                        <p data-translate="about.team.scheihing.description">Ingeniero en electronica. Especialista en inteligencia artificial.</p>
-                        <a class="link" href="#" data-translate="common.readmore">Read More</a>
-                    </div>
-                    <!-- End Team -->
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End Team -->
-        <!-- Testimonials -->
-        
-
-        <!-- End Testimonials -->
-        
- 
         <!--========== END PAGE LAYOUT ==========-->
 
         <!--========== FOOTER ==========-->
@@ -319,40 +257,6 @@
                                 </li>
                             </ul>
 
-                            <!-- Botón pequeño WhatsApp -->
-                            <a class="js-lucas-whatsapp-toggle" hidden data-enabled-display="inline-flex" href="https://wa.me/5493794688973?text=Hola%20quiero%20más%20información" 
-                            target="_blank" 
-                            style="color:white; font-size:14px; text-decoration:none; display:none; align-items:center; gap:5px;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                                    alt="WhatsApp" 
-                                    width="20" 
-                                    height="20">
-                                Lucas M.
-                            </a>
-                            <p class="js-lucas-whatsapp-toggle" hidden data-enabled-display="block" style="display:none;"></p>
-
-                            <!-- Botón pequeño WhatsApp sin fondo -->
-                            <a href="https://wa.me/5493794151325?text=Hola%20quiero%20más%20información" 
-                            target="_blank" 
-                            style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                                    alt="WhatsApp" 
-                                    width="20" 
-                                    height="20">
-                                Lautaro S.
-                            </a>
-                            <p class="js-lautaro-quarin-whatsapp-toggle" hidden data-enabled-display="block" style="display:none;"></p>
-
-                            <!-- Botón pequeño WhatsApp -->
-                            <a class="js-lautaro-quarin-whatsapp-toggle" hidden data-enabled-display="inline-flex" href="https://wa.me/5493624649174?text=Hola%20quiero%20más%20información" 
-                            target="_blank" 
-                            style="color:white; font-size:14px; text-decoration:none; display:none; align-items:center; gap:5px;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                                    alt="WhatsApp" 
-                                    width="20" 
-                                    height="20">
-                                Lautaro Q.
-                            </a>
                         </div>
 
                         <div class="col-sm-5 sm-margin-b-30">
@@ -409,8 +313,6 @@
         <script src="js/layout.min.js" type="text/javascript"></script>
         <script src="js/components/swiper.min.js" type="text/javascript"></script>
         <script src="js/components/wow.min.js" type="text/javascript"></script>
-        <script src="js/contact-toggles.js" type="text/javascript"></script>
-
         <!-- Language Translation System -->
         <style>
         .language-switch-container {
@@ -501,15 +403,6 @@
         </style>
 
         <script>
-        const SHOW_ABOUT_TEAM = false;
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const aboutTeam = document.getElementById('about-team');
-            if (aboutTeam) {
-                aboutTeam.hidden = !SHOW_ABOUT_TEAM;
-            }
-        });
-
         // Translation object with all text content
         const translations = {
             es: {
@@ -532,20 +425,6 @@
                     },
                     specialization: {
                         text: "Nos especializamos en electrónica, inteligencia artificial y desarrollo de software. Nuestro equipo está compuesto por ingenieros apasionados y expertos en tecnología, que trabajan juntos para crear productos innovadores y de alta calidad."
-                    },
-                    team: {
-                        title: "Conoce a nuestro equipo",
-                        description: "Nuestro equipo está compuesto por 3 ingenieros apasionados egresados de la Universidad Nacional del Nordeste, que trabajan juntos para crear productos innovadores y de alta calidad.",
-                        founder: "Founder",
-                        lucas: {
-                            description: "Ingeniero en electronica. Especialista en sistemas embebidos."
-                        },
-                        quarin: {
-                            description: "Ingeniero en electronica."
-                        },
-                        scheihing: {
-                            description: "Ingeniero en electronica. Especialista en inteligencia artificial."
-                        }
                     },
                     ceo: {
                         title: "Notes From CEO"
@@ -587,20 +466,6 @@
                     },
                     specialization: {
                         text: "We specialize in electronics, artificial intelligence and software development. Our team consists of passionate engineers and technology experts, who work together to create innovative and high-quality products."
-                    },
-                    team: {
-                        title: "Meet our team",
-                        description: "Our team consists of 3 passionate engineers graduated from the National University of the Northeast, who work together to create innovative and high-quality products.",
-                        founder: "Founder",
-                        lucas: {
-                            description: "Electronic engineer. Specialist in embedded systems."
-                        },
-                        quarin: {
-                            description: "Electronic engineer."
-                        },
-                        scheihing: {
-                            description: "Electronic engineer. Specialist in artificial intelligence."
-                        }
                     },
                     ceo: {
                         title: "Notes From CEO"
