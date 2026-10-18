@@ -1,964 +1,349 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-    <!-- BEGIN HEAD -->
-    <head>
-        <meta charset="utf-8"/>
-        <title>BARESAND</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="BARESAND - Diseñamos y fabricamos dispositivos electrónicos a medida, desde el esquema y diseño de PCB hasta el prototipado, pruebas y optimización para producción. Soluciones tecnológicas para tu negocio." name="description"/>
-        <meta content="BARESAND" name="author"/>
-        <meta name="keywords" content="BARESAND, electrónica, PCB, hardware, software, firmware, inteligencia artificial, diseño 3D, agrotecnología, dispositivos electrónicos, automatización, IoT"/>
-        <meta property="og:title" content="BARESAND - El poder del silicio a tu servicio"/>
-        <meta property="og:description" content="Diseñamos y fabricamos dispositivos electrónicos a medida, desde el esquema y diseño de PCB hasta el prototipado, pruebas y optimización para producción."/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.baresand.tech"/>
-        <meta property="og:site_name" content="BARESAND"/>
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="BARESAND - El poder del silicio a tu servicio"/>
-        <meta name="twitter:description" content="Diseñamos y fabricamos dispositivos electrónicos a medida, desde el esquema y diseño de PCB hasta el prototipado, pruebas y optimización para producción."/>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Baresand Electronics · Consultoría de ingeniería electrónica</title>
+<meta name="description" content="Consultoría de ingeniería electrónica en Corrientes, Argentina. Te ayudamos a decidir, diseñar y validar la tecnología que tu proyecto necesita: electrónica, firmware e inteligencia artificial.">
+<meta name="theme-color" content="#252729">
+<link rel="canonical" href="https://baresand.tech/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Baresand Electronics">
+<meta property="og:title" content="Baresand Electronics · Consultoría de ingeniería electrónica">
+<meta property="og:description" content="De la idea al silicio. Te ayudamos a decidir, diseñar y validar la tecnología que tu proyecto necesita.">
+<meta property="og:url" content="https://baresand.tech/">
+<meta property="og:image" content="https://baresand.tech/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/Ambatah-Light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Ambatah-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="base.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Baresand Electronics","url":"https://baresand.tech/","logo":"https://baresand.tech/apple-touch-icon.png",
+ "email":"contacto@baresand.tech","description":"Consultoría de ingeniería electrónica: electrónica, firmware e inteligencia artificial.",
+ "address":{"@type":"PostalAddress","addressLocality":"Corrientes","addressRegion":"Corrientes","addressCountry":"AR"},
+ "sameAs":["https://www.instagram.com/bare.sand/"]}
+</script>
+<style>
+  /* Baresand · sitio: todo a la vista en un tablero; la arena vive detrás de la caja que mirás */
+  main{position:relative;z-index:2}
+  .hero{min-height:94svh;display:grid;align-content:end;justify-items:center;text-align:center;padding:0 var(--gut) 7vh}
+  .hero .h1{font-size:clamp(30px,4vw,56px)}
+  .hero .lead{margin-inline:auto;max-width:50ch}
+  .hero .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+  .hero .static-logo{display:none;width:min(560px,80vw);margin:0 auto 6vh}
+  .no-webgl .hero .static-logo{display:block}
 
-        <!-- GLOBAL MANDATORY STYLES -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet" type="text/css">
-        <link href="vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  .board{max-width:1320px;margin:0 auto;padding:6vh var(--gut) 10vh;scroll-margin-top:80px}
+  .board-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px;flex-wrap:wrap}
+  .board-head p{margin:0}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(max(210px,24svh),auto);gap:14px}
+  .tile{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:14px;padding:22px 24px;border-radius:var(--r);
+    background:rgba(37,39,41,.34);border:1px solid var(--line);transition:border-color .5s,background .5s,transform .6s var(--ease),box-shadow .6s;overflow:hidden}
+  .tile::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .6s;
+    background:radial-gradient(120% 90% at 50% 120%,rgba(198,155,84,.12),transparent 60%)}
+  .tile:hover,.tile:focus-visible,.tile.live{border-color:rgba(198,155,84,.55);background:rgba(37,39,41,.12);transform:translateY(-2px)}
+  .tile:hover::after,.tile.live::after{opacity:1}
+  .tile:focus-visible{outline:1.5px solid var(--arena);outline-offset:3px}
+  .tile.pulse{animation:pulse 1.6s var(--ease)}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(198,155,84,0)}30%{box-shadow:0 0 0 6px rgba(198,155,84,.25)}}
+  .tile .kicker{margin:0}
+  .tile h2{font-weight:300;font-size:clamp(19px,1.55vw,24px);line-height:1.2;margin:0;max-width:22ch;text-wrap:balance;position:relative;text-shadow:0 0 14px #232527,0 0 6px #232527,0 0 2px #232527}
+  .tile .kicker,.tile .meta,.tile .foot,.casos-list{position:relative}
+  .tile .meta{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+  .tile .meta b{font-weight:400;color:var(--arena);letter-spacing:.12em;font-variant-numeric:tabular-nums}
+  .tile .foot{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+  .tile .foot span:last-child{width:26px;height:26px;border:1px solid var(--line-hi);border-radius:50%;display:grid;place-items:center;font-size:14px;letter-spacing:0;transition:border-color .3s,color .3s}
+  .tile:hover .foot span:last-child,.tile.live .foot span:last-child{border-color:var(--arena);color:var(--arena)}
+  .t-enfoque{grid-column:span 2;grid-row:span 2}.t-enfoque h2{font-size:clamp(28px,2.7vw,42px);font-weight:200;max-width:11ch}
+  .t-casos{grid-column:span 2}
+  .t-contacto{grid-column:span 4;grid-row:span 1;background:rgba(198,155,84,.09);flex-direction:row;align-items:center}
+  .t-contacto .c-main{display:flex;flex-direction:column;gap:12px}
+  .t-contacto h2{font-size:clamp(24px,2.2vw,34px);font-weight:200;max-width:none}
+  .t-contacto .meta{max-width:none}
+  .t-contacto .c-side{display:flex;flex-direction:column;align-items:flex-end;gap:12px;text-align:right}
+  .t-contacto .c-side .meta{font-size:15px}
+  .casos-list{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:14px;color:var(--muted)}
+  .casos-list li{display:flex;gap:10px;align-items:baseline}
+  .casos-list li::before{content:"";width:10px;height:1px;background:var(--arena);flex:none;transform:translateY(-4px)}
 
-        <!-- PAGE LEVEL PLUGIN STYLES -->
-        <link href="css/animate.css" rel="stylesheet">
-        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+  .panel{position:fixed;inset:0;z-index:30;display:grid;grid-template-columns:minmax(0,580px) 1fr;align-items:center;padding:100px var(--gut) 40px;
+    background:linear-gradient(90deg,rgba(29,31,32,.95) 0,rgba(29,31,32,.88) 46%,rgba(29,31,32,.12));opacity:0;visibility:hidden;transition:opacity .6s var(--ease),visibility .6s}
+  .panel.open{opacity:1;visibility:visible}
+  .panel .inner:focus{outline:none}
+  main,.site-foot{transition:opacity .6s var(--ease),filter .6s var(--ease)}
+  body.panel-open main,body.panel-open .site-foot{opacity:.07;filter:blur(6px)}
+  .nav{transition:opacity .5s var(--ease)}
+  body.panel-open .nav{opacity:0;pointer-events:none}
+  .panel[hidden]{display:none}
+  .panel .inner{max-height:calc(100svh - 190px);overflow:auto;padding-right:12px;transform:translateY(18px);transition:transform .8s var(--ease);scrollbar-width:thin;scrollbar-color:rgba(247,245,240,.2) transparent}
+  .panel.open .inner{transform:none}
+  .panel .top{position:absolute;top:calc(20px + env(safe-area-inset-top,0px));left:var(--gut);right:var(--gut);display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:2}
+  .panel .top .where{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--faint)}
+  .panel .top .where b{color:var(--arena);font-weight:400}
+  .panel .steps-nav{position:absolute;left:var(--gut);bottom:calc(24px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;z-index:2}
+  .panel .steps-nav button{font:inherit;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);background:rgba(37,39,41,.6);border:1px solid var(--line-hi);border-radius:40px;padding:9px 14px;cursor:pointer;transition:all .3s}
+  .panel .steps-nav button:hover{color:var(--marfil);border-color:var(--arena)}
+  .panel .more{grid-template-rows:1fr;opacity:1}
+  .panel .faq .more{grid-template-rows:0fr;opacity:0}
+  .panel .faq .more.open{grid-template-rows:1fr;opacity:1}
+  .panel .faq .more-toggle{display:flex;width:100%;justify-content:space-between;flex-direction:row-reverse;text-align:left;margin:0;padding:16px 0;border-top:1px solid var(--line);
+    font-size:15.5px;letter-spacing:0;text-transform:none;color:var(--marfil)}
+  .panel .faq .more p{margin:0 0 16px;color:var(--muted);font-size:15px;max-width:52ch}
+  .panel .case{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+  .panel .para{color:var(--muted);max-width:52ch;margin:14px 0 0}
+  .contact-line{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .copy{font:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--marfil);background:none;border:1px solid var(--line-hi);border-radius:40px;padding:12px 18px;cursor:pointer}
+  .copy:hover{border-color:var(--arena);color:var(--arena)}
 
-        <!-- THEME STYLES -->
-        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
-        
-        <!-- MOBILE OPTIMIZATIONS -->
-        <link href="css/mobile-optimizations.css" rel="stylesheet" type="text/css"/>
+  .site-foot{position:relative;z-index:2;max-width:1320px;margin:0 auto;padding:22px var(--gut) calc(26px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+  .site-foot a{text-decoration:none;color:var(--muted)} .site-foot a:hover{color:var(--arena)}
+  .site-foot nav{display:flex;gap:20px;flex-wrap:wrap}
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" href="img/logo-short.png"/>
-    </head>
-    <!-- END HEAD -->
+  @media(max-width:1000px){
+    .grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:minmax(180px,auto)}
+    .t-enfoque{grid-row:span 1}
+    .t-contacto{grid-column:span 2}
+  }
+  @media(max-width:900px){
+    .panel{grid-template-columns:1fr;align-items:end;background:linear-gradient(0deg,rgba(29,31,32,.97) 58%,rgba(29,31,32,.3));padding-top:36svh;padding-bottom:84px}
+    .panel .inner{max-height:calc(64svh - 110px)}
+  }
+  @media(max-width:560px){
+    .grid{grid-template-columns:1fr}
+    .t-enfoque,.t-casos,.t-contacto{grid-column:auto}
+    .t-contacto{flex-direction:column;align-items:flex-start}.t-contacto .c-side{align-items:flex-start;text-align:left}
+    .hero .ctas .btn{width:100%;justify-content:center}
+    .tile h2,.tile .meta,.casos-list{max-width:66%}
+    .panel .top .btn{white-space:nowrap;padding:10px 14px}
+  }
+</style>
+</head>
+<body>
+<canvas id="sand" aria-hidden="true"></canvas>
+<div class="vignette"></div>
+<main id="main"></main>
+<footer class="site-foot" id="pie"></footer>
+<div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle" hidden>
+  <div class="top"><span class="where" id="where"></span><button class="btn ghost" id="close" type="button">Cerrar ✕</button></div>
+  <div class="inner" id="panelInner" tabindex="-1"></div><div></div>
+  <div class="steps-nav"><button type="button" id="prev">← <span></span></button><button type="button" id="next"><span></span> →</button></div>
+</div>
+<noscript><p style="position:relative;z-index:3;text-align:center;padding:40px">Baresand Electronics · Consultoría de ingeniería electrónica · contacto@baresand.tech</p></noscript>
 
-    <!-- BODY -->
-    <body>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="logo.js"></script><script src="land.js"></script><script src="content.js"></script><script src="sand.js"></script><script src="site.js"></script>
+<script>
+(function () {
+  'use strict';
+  const {C, esc} = Site, S = Site.section, X = C.extra, CT = C.contact;
+  const ll = c => `${Math.abs(c.lat).toFixed(2)}° ${c.lat < 0 ? 'S' : 'N'} · ${Math.abs(c.lon).toFixed(2)}° ${c.lon < 0 ? 'O' : 'E'}`;
 
-        <!--========== HEADER ==========-->
-        <header class="header navbar-fixed-top">
-            <!-- Navbar -->
-            <nav class="navbar" role="navigation">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="menu-container">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="toggle-icon"></span>
-                        </button>
+  /* ---------------------------------------------------------------- the areas */
+  const T = [
+    {id: 'enfoque', s: S('enfoque'), shape: 'compass', foot: 'Cómo trabajamos'},
+    {id: 'donde', s: S('donde'), shape: 'globe', foot: 'Ubicación', meta: `<p class="meta"><b>${ll(CT.coords)}</b></p>`},
+    {id: 'electronica', s: S('electronica'), shape: 'chip', foot: 'Servicio'},
+    {id: 'firmware', s: S('firmware'), shape: 'code', foot: 'Servicio'},
+    {id: 'ia', s: S('ia'), shape: 'neural', foot: 'Servicio'},
+    {id: 'casos', s: S('casos'), shape: 'sprout', foot: '3 casos', meta: `<ul class="casos-list">${S('casos').cases.map(k => `<li>${esc(k.title)}</li>`).join('')}</ul>`},
+    {id: 'nosotros', s: X.nosotros, shape: 'team', foot: 'Equipo'},
+    {id: 'preguntas', s: X.faq, shape: 'question', foot: `${X.faq.items.length} respuestas`},
+    {id: 'contacto', s: S('contacto'), shape: 'logo', foot: 'Escribinos'},
+  ];
+  const tileHTML = t => {
+    if (t.id === 'contacto') return `<button class="tile t-contacto" id="contacto" data-id="contacto" data-shape="logo" type="button">
+      <span class="c-main"><p class="kicker">${esc(t.s.kicker)}</p><h2>${esc(t.s.title)}</h2><p class="meta">${esc(t.s.lead)}</p></span>
+      <span class="c-side"><p class="meta">${esc(CT.email)}<br>${esc(CT.instagram)} · ${esc(CT.place)}</p><span class="btn">Escribinos</span></span></button>`;
+    return `<button class="tile t-${t.id}" id="${t.id}" data-id="${t.id}" data-shape="${t.shape}" type="button">
+      <p class="kicker">${esc(t.s.kicker)}</p><h2>${esc(t.s.title)}</h2>${t.meta || ''}<span class="foot"><span>${esc(t.foot)}</span><span aria-hidden="true">+</span></span></button>`;
+  };
+  document.getElementById('main').innerHTML = `
+    <section class="hero" id="inicio">
+      <div class="static-logo">${window.logoSVG()}</div>
+      <p class="kicker">${esc(C.brand.line)}</p><h1 class="h1">${esc(S('inicio').title)}</h1><p class="lead">${esc(S('inicio').lead)}</p>
+      <p class="ctas"><a class="btn" href="#contacto">Contanos tu proyecto</a><a class="btn ghost" href="#tablero">Ver en un vistazo</a></p>
+    </section>
+    <section class="board" id="tablero" aria-label="Baresand en un vistazo">
+      <div class="board-head"><p class="kicker">En un vistazo</p><p class="small">Tocá una caja para abrirla</p></div>
+      <div class="grid">${T.map(tileHTML).join('')}</div>
+    </section>`;
+  document.getElementById('pie').innerHTML = `<span>© ${new Date().getFullYear()} Baresand Electronics · ${esc(CT.place)}</span>
+    <nav aria-label="Contacto"><a href="mailto:${esc(CT.email)}">${esc(CT.email)}</a><a href="${CT.instagramUrl}" target="_blank" rel="noopener">Instagram ${esc(CT.instagram)}</a></nav>`;
 
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a class="logo-wrap" href="index.html">
-                                <img class="logo-img logo-img-main" src="img/logo.png" alt="BARESAND Logo">
-                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="BARESAND Logo">
-                            </a>
-                        </div>
-                        <!-- End Logo -->
-                    </div>
+  Site.nav();
+  const lenis = Site.smooth();
+  const sand = Sand.create(document.getElementById('sand'), {shapes: ['cloud', 'logo', 'compass', 'globe', 'chip', 'code', 'neural', 'sprout', 'car', 'tower', 'team', 'question']});
+  if (!sand) document.documentElement.classList.add('no-webgl');
+  const heroLayout = () => Site.isMobile() ? {x: 0, y: .42, s: .34} : {x: 0, y: .46, s: .42};
+  if (sand) { sand.layout(heroLayout(), true); sand.intro('logo', 3800); }
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse nav-collapse">
-                        <div class="menu-container">
-                            <ul class="navbar-nav navbar-nav-right">
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="index.html" data-translate="nav.home">Home</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="about.html" data-translate="nav.about">About</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="faq.html" data-translate="nav.faq">FAQ</a></li>
-                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="contact.html" data-translate="nav.contact">Contact</a></li>
-                                <!-- Language Switcher -->
-                                <li class="nav-item">
-                                    <div class="nav-item-child language-switch-container">
-                                        <span class="language-label es-label">ES</span>
-                                        <label class="language-switch">
-                                            <input type="checkbox" id="languageToggle" onchange="toggleLanguage()">
-                                            <span class="slider"></span>
-                                        </label>
-                                        <span class="language-label en-label">EN</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Navbar Collapse -->
-                </div>
-            </nav>
-            <!-- Navbar -->
-        </header>
-        <!--========== END HEADER ==========-->
+  /* ---------------------------------------------------------------- the sand follows your attention */
+  const tiles = [...document.querySelectorAll('.tile')];
+  const canHover = matchMedia('(hover: hover)').matches;
+  let focusTile = null, open = null;
+  const FIT = {logo: .62, compass: .9, globe: .9, chip: .85, code: .8, neural: .85, sprout: .85, car: .9, tower: .9, team: .85, question: .85};
+  function toTile(tile) {
+    if (!sand || open || !tile || tile.id === 'contacto') return;
+    focusTile = tile;
+    tiles.forEach(t => t.classList.toggle('live', t === tile));
+    // the figure sits in the free right-hand part of the box, clear of its text
+    const r = tile.getBoundingClientRect(), shape = tile.dataset.shape;
+    const wide = tile.classList.contains('t-contacto');
+    const big = tile.classList.contains('t-enfoque'), side = big || Site.isMobile();   // side by side where there is room, behind the text elsewhere
+    const cx = r.left + r.width * (wide ? .5 : big ? .76 : side ? .8 : .72), cy = r.top + r.height * .5;
+    const fitH = Math.min(r.height / innerHeight * 2, .9) * .4, fitW = r.width * (side ? .2 : .2) / innerHeight * 2 / 1.05;
+    sand.morphTo(shape, 1500);
+    sand.layout({x: (cx / innerWidth * 2 - 1) * innerWidth / innerHeight, y: 1 - cy / innerHeight * 2, s: Math.min(fitH, fitW) * FIT[shape]});
+    sand.dim(side ? (Site.isMobile() ? .7 : .85) : .28);
+  }
+  function rest() {
+    if (!sand || open) return;
+    const b = document.getElementById('tablero').getBoundingClientRect();
+    if (b.top < innerHeight * .55) {
+      // on touch screens the tile nearest the middle of the screen takes the sand
+      let tile = focusTile;
+      if (!canHover || !tile) {
+        let best = 1e9; for (const t of tiles) { if (t.id === 'contacto') continue; const r = t.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - innerHeight * .5); if (d < best) { best = d; tile = t; } }
+      }
+      toTile(tile);
+    } else { tiles.forEach(t => t.classList.remove('live')); focusTile = null; sand.morphTo('logo', 1800); sand.layout(heroLayout()); sand.dim(1); }
+  }
+  tiles.forEach(t => {
+    t.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') toTile(t); });
+    t.addEventListener('focus', () => toTile(t));
+    t.addEventListener('click', () => go(t.dataset.id));
+  });
+  let raf = 0; const onScroll = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; rest(); }); };
+  addEventListener('scroll', onScroll, {passive: true}); addEventListener('resize', onScroll);
 
-        <!--========== VIDEO SLIDER ==========-->
-        <div id="carousel-example-generic" class="carousel slide video-carousel" data-pause="false">
-            <div class="container">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                </ol>
-            </div>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <video class="video-background" autoplay muted loop playsinline webkit-playsinline preload="metadata">
-                        <source src="videos/video1.mp4" type="video/mp4">
-                        <source src="videos/video1.webm" type="video/webm">
-                        <!-- Fallback image for browsers that don't support video -->
-                        <!-- <img src="img/1920x1080/01.jpg" alt="Video fallback" class="video-fallback"> -->
-                    </video>
-                    <div class="video-overlay"></div>
-                    <div class="container">
-                        <div class="carousel-centered">
-                            <div class="margin-b-40">
-                                <h1 class="carousel-title" style="font-family: 'Montserrat', sans-serif; font-size: 60px;" data-translate="hero.title1">EL PODER DEL SILICIO A TU SERVICIO</h1>
-                                <p class="subtitle1" class data-translate="hero.subtitle1">SOLUCIONES TECNOLOGICAS PARA TU NEGOCIO<br/></p></h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <video class="video-background" autoplay muted loop playsinline webkit-playsinline preload="metadata">
-                        <source src="videos/video2.mp4" type="video/mp4">
-                        <source src="videos/video2.webm" type="video/webm">
-                        <!-- Fallback image for browsers that don't support video -->
-                        <img src="img/1920x1080/02.jpg" alt="Video fallback" class="video-fallback">
-                    </video>
-                    <div class="video-overlay"></div>
-                    <div class="container">
-                        <div class="carousel-centered">
-                            <div class="margin-b-40">
-                                <h2 class="carousel-title" data-translate="hero.title2">SOMOS EL GRANITO DE ARENA<br/> QUE LE FALTABA A TU PROYECTO</h2>
-                                <p class="subtitle1" data-translate="hero.subtitle2">NO PIERDAS MAS TIEMPO HACE DE TU IDEA UNA REALIDAD<br/> </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--========== END VIDEO SLIDER ==========-->
-        
-        <!-- Force carousel to continue cycling -->
-        <script>
-        $(document).ready(function() {
-            // Override Bootstrap carousel pause behavior
-            var $carousel = $('#carousel-example-generic');
-            
-            // Remove any existing carousel instance
-            if ($carousel.data('bs.carousel')) {
-                $carousel.carousel('destroy');
-            }
-            
-            // Initialize with our custom settings
-            $carousel.carousel({
-                interval: 4500,
-                pause: false,
-                wrap: true,
-                keyboard: false
-            });
-            
-            // Force start
-            $carousel.carousel('cycle');
-            
-            // Prevent pause events
-            $carousel.on('pause.bs.carousel', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                $(this).carousel('cycle');
-                return false;
-            });
-            
-            // Prevent mouse events from stopping carousel
-            $carousel.off('mouseenter mouseleave');
-            $carousel.on('mouseenter mouseleave', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            });
-            
-            console.log('HTML carousel override applied');
-        });
-        </script>
-
-        <!--========== PAGE LAYOUT ==========-->
-        <!-- Service -->
-        <div class="bg-color-sky-light" data-auto-height="true">
-            <div class="content-lg container">
-                <div class="row row-space-1 margin-b-2">
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-settings"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3 data-translate="services.hardware.title">Hardware</h3>
-                                    <p class="margin-b-5" data-translate="services.hardware.description">Forjamos la materia prima de los sueños digitales, cimientos tangibles de lo imposible</p>
-                                </div>
-                               <!-- <a href="#" class="content-wrapper-link"></a>   --> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-screen-desktop"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3 data-translate="services.software.title">Software</h3>
-                                    <p class="margin-b-5" data-translate="services.software.description">Código que respira vida digital, transformando ideas en experiencias interactivas</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-energy"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3 data-translate="services.firmware.title">Firmware</h3>
-                                    <p class="margin-b-5" data-translate="services.firmware.description">El alma invisible que despierta al silicio, puente eterno entre materia y mente</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--// end row -->
-
-                <div class="row row-space-1">
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".4s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-bulb"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3 data-translate="services.ai.title">Inteligencia Artificial</h3>
-                                    <p class="margin-b-5" data-translate="services.ai.description">Sabiduría que emerge del silicio, aprendiendo de cada dato para revelar futuros posibles</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 sm-margin-b-2">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".5s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-layers"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3 data-translate="services.design3d.title">Diseño 3D</h3>
-                                    <p class="margin-b-5" data-translate="services.design3d.description">Esculpimos realidades fuera de las 2 dimensiones del papel, dando forma a lo inimaginable en cualquier proyecto</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".6s">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-target"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3 data-translate="services.specialized.title">Visitá el live-demo de un invernadero</h3>
-                                    <p class="margin-b-5" data-translate="services.specialized.description">Conocé en tiempo real cómo funciona el sistema de automatización de cultivos de nuestro cliente</p>
-                                </div>
-                                <a href="https://demo.baresand.tech" target="_blank" rel="noopener noreferrer" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End Service -->
-
-        <!-- Latest Products -->
-        <div class="content-lg container">
-            <div class="row margin-b-40">
-                <div class="col-sm-6">
-                    <h2 data-translate="portfolio.title">Trabajos Realizados</h2>
-                    <p data-translate="portfolio.description">Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito</p>
-                </div>
-            </div>
-            <!--// end row -->
-
-            <div class="row">
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="img/970x647/01.jpg" alt="Latest Products Image">
-                        </div>
-                    </div>
-                    <h4><a href="#" data-translate="projects.automation.title">Automatizacion de Cultivos</a></h4>
-                    <div class="project-category">
-                        <span class="text-uppercase color-subtitle font-weight-500" data-translate="projects.automation.category">Agrotecnología</span>
-                    </div>
-                    <p data-translate="projects.automation.description">Los controladores automáticos son clave en el cultivo de hongos y sistemas hidropónicos, ya que permiten regular las condiciones microclimáticas, gestionar los ciclos de ventilación y humedad de manera autónoma y, con estos parámetros controlados, asegurar un ambiente ideal que acelera el crecimiento y mejora la calidad del producto final.</p>
-                    <a class="link" href="https://demo.baresand.tech" target="_blank" rel="noopener noreferrer" data-translate="common.visitdemo">Visita live-demo</a>
-                </div>
-                <!-- End Latest Products -->
-
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="img/970x647/02.jpg" alt="Latest Products Image">
-                        </div>
-                    </div>
-                    <h4><a href="#" data-translate="projects.counter.title">Contador de Vehículos</a></h4>
-                    <div class="project-category">
-                        <span class="text-uppercase color-subtitle font-weight-500" data-translate="projects.counter.category">Transporte</span>
-                    </div>
-                    <p data-translate="projects.counter.description">
-                    Los contadores son centrales en la planificación de obras, ya que permiten monitorear el comportamiento de los flujos de tránsito en determinadas rutas o corredores y, con esos resultados, conocer las demandas puntuales para abordar la alternativa más acorde.</p>
-                    <a class="link" href="#" data-translate="common.readmore">Read More</a>
-                </div>
-                <!-- End Latest Products -->
-
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
-                            <img class="img-responsive" src="img/970x647/03.jpg" alt="Latest Products Image">
-                        </div>
-                    </div>
-                    <h4><a href="#" data-translate="projects.detector.title">Detector de fallas electricas</a></h4>
-                    <div class="project-category">
-                        <span class="text-uppercase color-subtitle font-weight-500" data-translate="projects.detector.category">Inteligencia Artificial</span>
-                    </div>
-                    <p data-translate="projects.detector.description">El detector de fallas eléctricas es un sistema de computer vision que analiza el estado de la red eléctrica en imagenes captadas por drones y detecta posibles problemas o anomalías. Su función es identificar y localizar fallas eléctricas en lineas de media y alta tensión, lo que permite prevenir interrupciones, reducir los costos de mantenimiento y mejorar la eficiencia energética.</p>
-                    <a class="link" href="#" data-translate="common.readmore">Read More</a>
-                </div>
-                <!-- End Latest Products -->
-            </div>
-            <!--// end row -->
-        </div>
-        <!-- End Latest Products -->
-
-        <!-- Work -->
-        <div class="bg-color-sky-light overflow-h">
-            <div class="content-lg container">
-                <div class="row margin-b-40">
-                    <div class="col-sm-6">
-                        <h2 data-translate="showcase.title">Showcase</h2>
-                        <p data-translate="showcase.description">Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito</p>
-                    </div>
-                </div>
-                <!--// end row -->
-
-                <!-- Masonry Grid -->
-                <div class="masonry-grid">
-                    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
-                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8">
-                        <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".1s">
-                            <div class="work-overlay">
-                                <img class="full-width img-responsive" src="img/800x400/01.jpg" alt="Portfolio Image">
-                            </div>
-                            <div class="work-content">
-                                <h3 class="color-white margin-b-5" data-translate="showcase.work1.title">Diseño de Hardware</h3>
-                                <p class="color-white margin-b-0" data-translate="showcase.work1.description">Diseñamos hardware para diversas aplicaciones, desde 0 con software especializado y de ultima generacion.</p>
-                            </div>
-                            <a class="content-wrapper-link" href="#"></a>
-                        </div>
-                        <!-- End Work -->
-                    </div>
-                    <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
-                        <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".2s">
-                            <div class="work-overlay">
-                                <img class="full-width img-responsive" src="img/397x400/01.jpg" alt="Portfolio Image">
-                            </div>
-                            <div class="work-content">
-                                <h3 class="color-white margin-b-5" data-translate="showcase.work2.title">PCB</h3>
-                                <p class="color-white margin-b-0" data-translate="showcase.work2.description">Nuestras placas de circuito impreso son diseñadas para cumplir con las necesidades especificas de cada proyecto, desde sistemas embebidos hasta dispositivos industriales.</p>
-                            </div>
-                            <a class="content-wrapper-link" href="#"></a>
-                        </div>
-                        <!-- End Work -->
-                    </div>
-                    <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
-                        <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".3s">
-                            <div class="work-overlay">
-                                <img class="full-width img-responsive" src="img/397x300/01.jpg" alt="Portfolio Image">
-                            </div>
-                            <div class="work-content">
-                                <h3 class="color-white margin-b-5" data-translate="showcase.work3.title">El tamaño que necesites</h3>
-                                <p class="color-white margin-b-0" data-translate="showcase.work3.description">Nuestras soluciones son diseñadas para cumplir con las necesidades especificas de cada proyecto.</p>
-                            </div>
-                            <a class="content-wrapper-link" href="#"></a>
-                        </div>
-                        <!-- End Work -->
-                    </div>
-                    <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
-                        <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".4s">
-                            <div class="work-overlay">
-                                <img class="full-width img-responsive" src="img/397x300/02.jpg" alt="Portfolio Image">
-                            </div>
-                            <div class="work-content">
-                                <h3 class="color-white margin-b-5" data-translate="showcase.work4.title">Gabinetes 3D</h3>
-                                <p class="color-white margin-b-0" data-translate="showcase.work4.description">Para que tu proyecto se vea como lo imaginas, diseñamos en 3D los gabinetes y elementos que lo complementan.</p>
-                            </div>
-                            <a class="content-wrapper-link" href="#"></a>
-                        </div>
-                        <!-- End Work -->
-                    </div>
-                    <div class="masonry-grid-item col-xs-6 col-sm-6 col-md-4">
-                        <!-- Work -->
-                        <div class="work wow fadeInUp" data-wow-duration=".3" data-wow-delay=".5s">
-                            <div class="work-overlay">
-                                <img class="full-width img-responsive" src="img/397x300/03.jpg" alt="Portfolio Image">
-                            </div>
-                            <div class="work-content">
-                                <h3 class="color-white margin-b-5" data-translate="showcase.work5.title">Diseño de punta</h3>
-                                <p class="color-white margin-b-0" data-translate="showcase.work5.description">Utilizamos software de ultima generacion para diseñar nuestras soluciones, asegurando la mejor calidad y rendimiento.</p>
-                            </div>
-                            <a class="content-wrapper-link" href="#"></a>
-                        </div>
-                        <!-- End Work -->
-                    </div>
-                </div>
-                <!-- End Masonry Grid -->
-            </div>
-        </div>
-        <!-- End Work -->
-
-    
-        <!-- Promo Section -->
-        <div class="promo-section overflow-h">
-            <div class="container">
-                <div class="clearfix">
-                    <div class="ver-center">
-                        <div class="ver-center-aligned">
-                            <div class="promo-section-col">
-                                <h2 data-translate="cta.title">Trabaja con nosotros</h2>
-                                <p data-translate="cta.description1">Si tenes una idea innovadora y queres llevarla a la realidad, no dudes en contactarnos. Queremos poner el poder del silicio en tus manos.</p>
-                                <p data-translate="cta.description2">No te quedes sin la oportunidad de traer al plano fisico tu visión del futuro, ya sea para tu empresa o proyecto personal. ¡Contáctanos hoy mismo!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="promo-section-img-right">
-                <img class="img-responsive" src="img\cnq.jpg" alt="Content Image">
-            </div>
-        </div>
-        <!-- End Promo Section -->
-        <!--========== END PAGE LAYOUT ==========-->
-
-        <!--========== FOOTER ==========-->
-        <footer class="footer">
-            <!-- Links -->
-            <div class="footer-seperator">
-                <div class="content-lg container">
-                    <div class="row">
-                        <div class="col-sm-2 sm-margin-b-50">
-                            <!-- List -->
-                            <ul class="list-unstyled footer-list">
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">Home</a></li>
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">About</a></li>
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">Careers</a></li>
-                                <li class="footer-list-item"><a class="footer-list-link" href="#">Contact</a></li>
-                            </ul>
-                            <!-- End List -->
-                        </div>
-
-                        <div class="col-sm-4 sm-margin-b-30">
-                           <!-- List -->
-                            <ul class="list-unstyled footer-list">
-                                <li class="footer-list-item">
-                                    <a class="footer-list-link" 
-                                    href="https://www.instagram.com/bare.sand/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    style="color:white; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:5px;">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
-                                            alt="Instagram" 
-                                            width="20" 
-                                            height="20">
-                                            Instagram
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                        <div class="col-sm-5 sm-margin-b-30">
-                            <h2 class="color-white" data-translate="contact.title">Mandanos un mensaje</h2>
-
-                            <!-- Formspree Form -->
-                            <form action="https://formspree.io/f/xldlvrrv" method="POST">
-                                <input type="text" name="name" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.name" placeholder="Nombre" required>
-                                <input type="email" name="email" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.email" placeholder="Email" required>
-                                <input type="text" name="phone" class="form-control footer-input margin-b-20" data-translate-placeholder="contact.phone" placeholder="Teléfono">
-                                <textarea name="message" class="form-control footer-input margin-b-30" rows="6" data-translate-placeholder="contact.message" placeholder="Mensaje" required></textarea>
-                                <button type="submit" class="btn-theme btn-theme-sm btn-base-bg text-uppercase" data-translate="contact.send">Enviar</button>
-                            </form>
-                            <!-- End Formspree Form -->
-                        </div>
-                    </div>
-                    <!--// end row -->
-                </div>
-            </div>
-            <!-- End Links -->
-
-            <!-- Copyright -->
-            <div class="content container">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <img class="footer-logo" src="img/logo.png" alt="BARESAND Logo">
-                    </div>
-                    <div class="col-xs-6 text-right">
-                        <p class="margin-b-0" data-translate="footer.copyright">&copy; 2025 BARESAND. Todos los derechos reservados.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--========== END FOOTER ==========-->
-
-
-
-        <!-- Back To Top -->
-        <a href="javascript:void(0);" class="js-back-to-top back-to-top" data-translate="common.top">Top</a>
-
-        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-        <!-- CORE PLUGINS -->
-        <script src="vendor/jquery.min.js" type="text/javascript"></script>
-        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-
-        <!-- PAGE LEVEL PLUGINS -->
-        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
-        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
-        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
-        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
-        <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
-        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
-        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-
-        <!-- PAGE LEVEL SCRIPTS -->
-        <script src="js/layout.min.js" type="text/javascript"></script>
-        <script src="js/components/wow.min.js" type="text/javascript"></script>
-        <script src="js/components/swiper.min.js" type="text/javascript"></script>
-        <script src="js/components/masonry.min.js" type="text/javascript"></script>
-
-        <!-- Carousel Fix Script - Must be last -->
-        <script src="js/carousel-fix.js" type="text/javascript"></script>
-        
-        <!-- Mobile Video Optimizer - Must be after carousel fix -->
-        <script src="js/mobile-video-optimizer.js" type="text/javascript"></script>
-        <!-- Language Translation System -->
-        <style>
-        .language-switch-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            cursor: pointer;
-            border-radius: 0;
-            transition: all 0.3s ease;
-            height: auto;
-            white-space: nowrap;
-        }
-        
-        .language-switch-container:hover {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .language-label {
-            font-size: 12px;
-            font-weight: 500;
-            color: inherit;
-            transition: opacity 0.3s ease;
-            line-height: 1;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        
-        .language-label.active {
-            opacity: 1;
-        }
-        
-        .language-label.inactive {
-            opacity: 0.6;
-        }
-        
-        .language-switch {
-            position: relative;
-            display: inline-block;
-            width: 28px;
-            height: 14px;
-            vertical-align: middle;
-        }
-        
-        .language-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-        
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 10px;
-            width: 10px;
-            left: 1px;
-            bottom: 1px;
-            background: #fff;
-            transition: all 0.3s ease;
-            border-radius: 50%;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        
-        input:checked + .slider {
-            background: rgba(255, 255, 255, 0.4);
-        }
-        
-        input:checked + .slider:before {
-            transform: translateX(14px);
-        }
-        
-        .slider:hover {
-            background: rgba(255, 255, 255, 0.5);
-        }
-        </style>
-
-        <script>
-        // Translation object with all text content
-        const translations = {
-            es: {
-                nav: {
-                    home: "Home",
-                    about: "About", 
-                    faq: "FAQ",
-                    contact: "Contact"
-                },
-                hero: {
-                    title1: "EL PODER DEL SILICIO A TU SERVICIO",
-                    subtitle1: "DISEÑO Y DESARROLLO DE HARDWARE, FIRMWARE, SOFTWARE Y SOLUCIONES DE IA A MEDIDA",
-                    title2: "SOMOS EL GRANITO DE ARENA QUE LE FALTABA A TU PROYECTO",
-                    subtitle2: "DE LA IDEA AL PRODUCTO FINAL, TE ACOMPAÑAMOS EN TODO EL PROCESO"
-                },
-                services: {
-                    hardware: {
-                        title: "Hardware",
-                        description: "Diseñamos y fabricamos dispositivos electrónicos a medida, desde el esquema y diseño de PCB hasta el prototipado, pruebas y optimización para producción."
-                    },
-                    software: {
-                        title: "Software", 
-                        description: "Desarrollamos aplicaciones y plataformas para la gestión, monitoreo y control de equipos, integrando comunicación con hardware y bases de datos."
-                    },
-                    firmware: {
-                        title: "Firmware",
-                        description: "Programamos el núcleo lógico de los dispositivos, incluyendo sistemas operativos de tiempo real (RTOS), para lograr control preciso, confiabilidad y alto rendimiento."
-                    },
-                    ai: {
-                        title: "Inteligencia Artificial",
-                        description: "Implementamos modelos y algoritmos de IA que procesan y analizan datos en tiempo real, mejorando la eficiencia y la toma de decisiones."
-                    },
-                    design3d: {
-                        title: "Diseño 3D",
-                        description: "Modelamos piezas, carcasas y prototipos en 3D listos para impresión o fabricación, asegurando precisión dimensional y funcionalidad."
-                    },
-                    specialized: {
-                        title: "Visitá la web de control del invernadero de un cliente en tiempo real!",
-                        description: "click aquí!"
-                    }
-                },
-                portfolio: {
-                    title: "Trabajos Realizados",
-                    description: "Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito"
-                },
-                projects: {
-                    automation: {
-                        title: "Automatizacion de Cultivos",
-                        category: "Agrotecnología", 
-                        description: "Los controladores automáticos son clave en el cultivo de hongos y sistemas hidropónicos, ya que permiten regular las condiciones microclimáticas, gestionar los ciclos de ventilación y humedad de manera autónoma y, con estos parámetros controlados, asegurar un ambiente ideal que acelera el crecimiento y mejora la calidad del producto final."
-                    },
-                    counter: {
-                        title: "Contador de Vehículos",
-                        category: "Transporte",
-                        description: "Los contadores son centrales en la planificación de obras, ya que permiten monitorear el comportamiento de los flujos de tránsito en determinadas rutas o corredores y, con esos resultados, conocer las demandas puntuales para abordar la alternativa más acorde."
-                    },
-                    detector: {
-                        title: "Detector de fallas electricas",
-                        category: "Inteligencia Artificial",
-                        description: "El detector de fallas eléctricas es un sistema de computer vision que analiza el estado de la red eléctrica en imagenes captadas por drones y detecta posibles problemas o anomalías. Su función es identificar y localizar fallas eléctricas en lineas de media y alta tensión, lo que permite prevenir interrupciones, reducir los costos de mantenimiento y mejorar la eficiencia energética."
-                    }
-                },
-                showcase: {
-                    title: "Showcase",
-                    description: "Enfocados en la innovación y la excelencia, nuestros proyectos son el testimonio de nuestro compromiso con la tecnología y el éxito",
-                    work1: {
-                        title: "Diseño de Hardware",
-                        description: "Diseñamos hardware para diversas aplicaciones, desde 0 con software especializado y de ultima generacion."
-                    },
-                    work2: {
-                        title: "PCB",
-                        description: "Nuestras placas de circuito impreso son diseñadas para cumplir con las necesidades especificas de cada proyecto, desde sistemas embebidos hasta dispositivos industriales."
-                    },
-                    work3: {
-                        title: "El tamaño que necesites",
-                        description: "Nuestras soluciones son diseñadas para cumplir con las necesidades especificas de cada proyecto."
-                    },
-                    work4: {
-                        title: "Gabinetes 3D",
-                        description: "Para que tu proyecto se vea como lo imaginas, diseñamos en 3D los gabinetes y elementos que lo complementan."
-                    },
-                    work5: {
-                        title: "Diseño de punta",
-                        description: "Utilizamos software de ultima generacion para diseñar nuestras soluciones, asegurando la mejor calidad y rendimiento."
-                    }
-                },
-                cta: {
-                    title: "Trabaja con nosotros",
-                    description1: "Si tenes una idea innovadora y queres llevarla a la realidad, no dudes en contactarnos. Queremos poner el poder del silicio en tus manos.",
-                    description2: "No te quedes sin la oportunidad de traer al plano fisico tu visión del futuro, ya sea para tu empresa o proyecto personal. ¡Contáctanos hoy mismo!"
-                },
-                contact: {
-                    title: "Mandanos un mensaje",
-                    name: "Nombre",
-                    email: "Email", 
-                    phone: "Telefono",
-                    message: "Mensaje",
-                    send: "Enviar"
-                },
-                footer: {
-                    copyright: "© 2025 BARESAND. Todos los derechos reservados."
-                },
-                common: {
-                    explore: "Explore",
-                    readmore: "Read More",
-                    visitdemo: "live-demo",
-                    top: "Top"
-                }
-            },
-            en: {
-                nav: {
-                    home: "Home",
-                    about: "About",
-                    faq: "FAQ", 
-                    contact: "Contact"
-                },
-                hero: {
-                    title1: "THE POWER OF SILICON AT YOUR SERVICE",
-                    subtitle1: "CUSTOM DESIGN AND DEVELOPMENT OF HARDWARE, FIRMWARE, SOFTWARE, AND AI SOLUTIONS",
-                    title2: "WE ARE THE MISSING PIECE YOUR PROJECT NEEDS",
-                    subtitle2: "FROM IDEA TO FINAL PRODUCT, WE SUPPORT YOU THROUGH EVERY STEP"
-                },
-                services: {
-                    hardware: {
-                        title: "Hardware",
-                        description: "We design and manufacture custom electronic devices, from schematic and PCB design to prototyping, testing, and optimization for production."
-                    },
-                    software: {
-                        title: "Software", 
-                        description: "We develop applications and platforms for equipment management, monitoring, and control, integrating communication with hardware and databases."
-                    },
-                    firmware: {
-                        title: "Firmware",
-                        description: "We program the core logic of devices, including real-time operating systems (RTOS), to ensure precise control, reliability, and high performance."
-                    },
-                    ai: {
-                        title: "Artificial Intelligence",
-                        description: "We implement AI models and algorithms that process and analyze data in real time, improving efficiency and decision-making."
-                    },
-                    design3d: {
-                        title: "3D Design",
-                        description: "We create 3D models for parts, enclosures, and prototypes ready for printing or manufacturing, ensuring dimensional accuracy and functionality."
-                    },
-                    specialized: {
-                        title: "Visit our client's greenhouse dashboard in real time!",
-                        description: "Click here!"
-                    }
-                },
-                portfolio: {
-                    title: "Completed Works",
-                    description: "Focused on innovation and excellence, our projects are testimony to our commitment to technology and success"
-                },
-                projects: {
-                    automation: {
-                        title: "Crop Automation",
-                        category: "Agrotechnology",
-                        description: "Automatic controllers are key in mushroom cultivation and hydroponic systems, as they allow regulating microclimatic conditions, managing ventilation and humidity cycles autonomously and, with these controlled parameters, ensuring an ideal environment that accelerates growth and improves the quality of the final product."
-                    },
-                    counter: {
-                        title: "Vehicle Counter",
-                        category: "Transportation",
-                        description: "Counters are central in construction planning, as they allow monitoring the behavior of traffic flows on certain routes or corridors and, with those results, knowing the specific demands to address the most appropriate alternative."
-                    },
-                    detector: {
-                        title: "Electrical Fault Detector",
-                        category: "Artificial Intelligence",
-                        description: "The electrical fault detector is a computer vision system that analyzes the state of the electrical grid in images captured by drones and detects possible problems or anomalies. Its function is to identify and locate electrical faults in medium and high voltage lines, which allows preventing interruptions, reducing maintenance costs and improving energy efficiency."
-                    }
-                },
-                showcase: {
-                    title: "Showcase",
-                    description: "Focused on innovation and excellence, our projects are testimony to our commitment to technology and success",
-                    work1: {
-                        title: "Hardware Design",
-                        description: "We design hardware for diverse applications, from scratch with specialized and cutting-edge software."
-                    },
-                    work2: {
-                        title: "PCB",
-                        description: "Our printed circuit boards are designed to meet the specific needs of each project, from embedded systems to industrial devices."
-                    },
-                    work3: {
-                        title: "Any size you need",
-                        description: "Our solutions are designed to meet the specific needs of each project."
-                    },
-                    work4: {
-                        title: "3D Enclosures",
-                        description: "So your project looks exactly as you imagine it, we design in 3D the enclosures and elements that complement it."
-                    },
-                    work5: {
-                        title: "Cutting-edge Design",
-                        description: "We use the latest generation software to design our solutions, ensuring the best quality and performance."
-                    }
-                },
-                cta: {
-                    title: "Work with us",
-                    description1: "If you have an innovative idea and want to make it a reality, don't hesitate to contact us. We want to put the power of silicon in your hands.",
-                    description2: "Don't miss the opportunity to bring your vision of the future to the physical plane, whether for your company or personal project. Contact us today!"
-                },
-                contact: {
-                    title: "Send us a message",
-                    name: "Name",
-                    email: "Email",
-                    phone: "Phone", 
-                    message: "Message",
-                    send: "Send"
-                },
-                footer: {
-                    copyright: "© 2025 BARESAND. All rights reserved."
-                },
-                common: {
-                    explore: "Explore",
-                    readmore: "Read More",
-                    visitdemo: "live-demo",
-                    top: "Top"
-                }
-            }
+  /* ---------------------------------------------------------------- panels: everything about an area */
+  const panel = document.getElementById('panel'), inner = document.getElementById('panelInner');
+  const titled = html => html.replace(/<h2 class="h2"/, '<h2 class="h2" id="panelTitle"');
+  function contactBody(s) {
+    return titled(Site.block(s)) + `
+      <form class="form" id="contactForm" novalidate>
+        <label>Nombre<input name="n" autocomplete="name" required></label>
+        <label>Email<input name="e" type="email" autocomplete="email" required></label>
+        <label>Empresa (opcional)<input name="o" autocomplete="organization"></label>
+        <label>Tu desafío<textarea name="m" required placeholder="Contanos en pocas líneas qué necesitás resolver"></textarea></label>
+        <div><button class="btn" type="submit">Preparar el mail</button></div>
+        <p class="note">Se abre tu programa de correo con el mensaje listo para enviar a ${esc(CT.email)}.</p>
+        <p class="sent" hidden>Listo: revisá tu programa de correo. Si no se abrió, escribinos directo a ${esc(CT.email)}.</p>
+      </form>
+      <div class="contact-line"><button class="copy" type="button" id="copyMail">Copiar ${esc(CT.email)}</button>
+        <a class="btn ghost" href="${CT.instagramUrl}" target="_blank" rel="noopener">Instagram ${esc(CT.instagram)} ↗</a></div>`;
+  }
+  function body(t) {
+    const s = t.s;
+    if (t.id === 'casos') return `<p class="kicker">${esc(s.kicker)}</p><h2 class="h2" id="panelTitle">${esc(s.title)}</h2><p class="lead">${esc(s.lead)}</p>` +
+      s.cases.map((k, i) => `<div class="case" data-case="${i}">${Site.caseBlock(k, {open: true})}</div>`).join('');
+    if (t.id === 'contacto') return contactBody(s);
+    if (t.id === 'nosotros') return titled(Site.block(s)) + s.body.map(p => `<p class="para">${esc(p)}</p>`).join('');
+    if (t.id === 'preguntas') return titled(Site.block(s)) + `<div class="faq" style="margin-top:22px">${s.items.map(x => Site.more(x.q, `<p>${esc(x.a)}</p>`)).join('')}</div>`;
+    let h = titled(Site.block(s, {noMore: true}));
+    if (s.moreLabel) h += `<p class="kicker" style="margin-top:30px">${esc(s.moreLabel)}</p>` + Site.moreBody(s);
+    return h;
+  }
+  function wireContact() {
+    const f = document.getElementById('contactForm'); if (!f) return;
+    f.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      const v = k => f.elements[k].value.trim();
+      const subject = `Consulta desde la web${v('o') ? ' · ' + v('o') : ''}`;
+      const text = `${v('m')}\n\n${v('n')}${v('o') ? ' · ' + v('o') : ''}\n${v('e')}`;
+      location.href = `mailto:${CT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+      f.querySelector('.sent').hidden = false;
+    });
+    const cp = document.getElementById('copyMail');
+    cp.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(CT.email); cp.textContent = 'Copiado'; }
+      catch { const r = document.createRange(); r.selectNodeContents(cp); getSelection().removeAllRanges(); getSelection().addRange(r); }
+      setTimeout(() => cp.textContent = `Copiar ${CT.email}`, 1800);
+    });
+  }
+  let caseIdx = 0, lastFocus = null;
+  function show(id) {
+    const i = T.findIndex(q => q.id === id); if (i < 0) return;
+    const t = T[i]; open = t;
+    inner.innerHTML = body(t); Site.wireMore(inner); wireContact(); inner.scrollTop = 0;
+    document.getElementById('where').innerHTML = `<b>${String(i + 1).padStart(2, '0')}</b> / ${String(T.length).padStart(2, '0')} · ${esc(t.s.kicker)}`;
+    const prev = T[(i - 1 + T.length) % T.length], next = T[(i + 1) % T.length];
+    document.querySelector('#prev span').textContent = prev.s.kicker; document.getElementById('prev').dataset.id = prev.id;
+    document.querySelector('#next span').textContent = next.s.kicker; document.getElementById('next').dataset.id = next.id;
+    if (panel.hidden) { panel.hidden = false; lastFocus = document.activeElement; requestAnimationFrame(() => panel.classList.add('open')); }
+    document.body.classList.add('panel-open');
+    lenis && lenis.stop(); document.body.style.overflow = 'hidden';
+    setTimeout(() => inner.focus({preventScroll: true}), 60);
+    Site.setNav(['electronica', 'firmware', 'ia'].includes(id) ? 'servicios' : id);
+    if (sand) {
+      const m = Site.isMobile();
+      sand.morphTo(t.shape, 1700); sand.layout(m ? {x: 0, y: .66, s: .24} : {x: .5 * innerWidth / innerHeight + .05, y: 0, s: t.shape === 'logo' ? .42 : .5}); sand.dim(1);
+      inner.onscroll = null;
+      if (t.id === 'casos') {   // walk through the three cases as you read
+        inner.onscroll = () => {
+          const cs = [...inner.querySelectorAll('.case')], mid = innerHeight * (m ? .75 : .5);
+          let k = 0; cs.forEach((c, j) => { if (c.getBoundingClientRect().top < mid) k = j; });
+          if (k !== caseIdx) { caseIdx = k; sand.morphTo(t.s.cases[k].shape, 1500); }
         };
+        caseIdx = -1; inner.onscroll();
+      }
+    }
+  }
+  function hide() {
+    if (!open) return;
+    const id = open.id; open = null; inner.onscroll = null;
+    panel.classList.remove('open'); document.body.classList.remove('panel-open'); setTimeout(() => { if (!open) panel.hidden = true; }, 600);
+    lenis && lenis.start(); document.body.style.overflow = '';
+    Site.setNav('');
+    const tile = document.getElementById(id);
+    (lastFocus && lastFocus.focus) ? lastFocus.focus({preventScroll: true}) : tile.focus({preventScroll: true});
+    focusTile = tile; rest();
+  }
+  // every area has its own address (#casos, #contacto...): links, back button and sharing all work
+  function go(id) { if (location.hash !== '#' + id) history.pushState({panel: id}, '', '#' + id); show(id); }
+  function back() { const st = history.state; if (st && st.panel && !st.entry) history.back(); else { history.replaceState(null, '', location.pathname + location.search); hide(); } }
+  addEventListener('popstate', () => { const h = location.hash.slice(1); if (T.some(t => t.id === h)) show(h); else hide(); });
+  document.getElementById('close').onclick = back;
+  const step = e => { const id = e.currentTarget.dataset.id; history.replaceState({...(history.state || {}), panel: id}, '', '#' + id); show(id); };
+  document.getElementById('prev').onclick = step; document.getElementById('next').onclick = step;
+  addEventListener('keydown', e => {
+    if (!open) return;
+    if (e.key === 'Escape') back();
+    if (e.key === 'ArrowRight' && !e.target.closest('input,textarea')) document.getElementById('next').click();
+    if (e.key === 'ArrowLeft' && !e.target.closest('input,textarea')) document.getElementById('prev').click();
+    if (e.key === 'Tab') {   // keep focus inside the panel
+      const f = [...panel.querySelectorAll('button,a[href],input,textarea,[tabindex="0"]')].filter(x => x.offsetParent);
+      if (!f.length) return; const a = f[0], z = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); } else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+    }
+  });
+  // in-page links: areas open their panel; "Servicios" shows the three service boxes
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]'); if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    if (T.some(t => t.id === id)) { e.preventDefault(); e.stopImmediatePropagation(); go(id); return; }
+    if (id === 'servicios' || id === 'tablero') {
+      e.preventDefault(); e.stopImmediatePropagation(); if (open) back();
+      const board = document.getElementById('tablero');
+      lenis ? lenis.scrollTo(board, {offset: -20, duration: 1.4}) : board.scrollIntoView({behavior: 'smooth'});
+      if (id === 'servicios') setTimeout(() => ['electronica', 'firmware', 'ia'].forEach((k, i) => setTimeout(() => { const t = document.getElementById(k); t.classList.remove('pulse'); void t.offsetWidth; t.classList.add('pulse'); if (i === 0) toTile(t); }, i * 160)), 900);
+    }
+    if (id === 'inicio') { e.preventDefault(); e.stopImmediatePropagation(); if (open) back(); lenis ? lenis.scrollTo(0, {duration: 1.4}) : scrollTo({top: 0, behavior: 'smooth'}); }
+  }, true);
 
-        // Current language state
-        let currentLanguage = localStorage.getItem('language') || 'es';
-
-        // Function to get nested translation value
-        function getTranslation(key, lang) {
-            const keys = key.split('.');
-            let value = translations[lang];
-            
-            for (const k of keys) {
-                if (value && value[k]) {
-                    value = value[k];
-                } else {
-                    return key; // Return original key if translation not found
-                }
-            }
-            
-            return value;
-        }
-
-        // Function to translate all elements
-        function translatePage(language) {
-            // Translate regular text elements
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                const translation = getTranslation(key, language);
-                
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.placeholder = translation;
-                } else {
-                    element.innerHTML = translation;
-                }
-            });
-
-            // Translate placeholder elements  
-            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
-                const key = element.getAttribute('data-translate-placeholder');
-                const translation = getTranslation(key, language);
-                element.placeholder = translation;
-            });
-
-            // Update language switch
-            const languageToggle = document.getElementById('languageToggle');
-            const esLabel = document.querySelector('.es-label');
-            const enLabel = document.querySelector('.en-label');
-            
-            if (languageToggle && esLabel && enLabel) {
-                if (language === 'es') {
-                    languageToggle.checked = false;
-                    esLabel.classList.add('active');
-                    esLabel.classList.remove('inactive');
-                    enLabel.classList.add('inactive');
-                    enLabel.classList.remove('active');
-                } else {
-                    languageToggle.checked = true;
-                    enLabel.classList.add('active');
-                    enLabel.classList.remove('inactive');
-                    esLabel.classList.add('inactive');
-                    esLabel.classList.remove('active');
-                }
-            }
-
-            // Update HTML lang attribute
-            document.documentElement.lang = language;
-            
-            // Save language preference
-            localStorage.setItem('language', language);
-            currentLanguage = language;
-        }
-
-        // Function to toggle language
-        function toggleLanguage() {
-            const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
-            translatePage(newLanguage);
-        }
-
-        // Initialize page with saved language
-        document.addEventListener('DOMContentLoaded', function() {
-            translatePage(currentLanguage);
-        });
-        </script>
-
-        <!-- Prevent all links with href="#" from scrolling to top (for placeholder links) -->
-        <script>
-        document.querySelectorAll('a[href="#"]').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-            });
-        });
-        </script>
-
-    </body>
-    <!-- END BODY -->
+  // arriving with an address opens that area
+  const first = location.hash.slice(1);
+  if (T.some(t => t.id === first)) { history.replaceState({panel: first, entry: true}, '', '#' + first); setTimeout(() => show(first), 300); }
+  else if (first === 'tablero' || first === 'servicios') setTimeout(() => document.getElementById('tablero').scrollIntoView(), 100);
+})();
+</script>
+</body>
 </html>

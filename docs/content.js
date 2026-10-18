@@ -1,0 +1,128 @@
+/* Baresand — contenido del sitio (fuente única para todas las opciones).
+   Pendiente: resultados medibles de cada caso (se agregan más adelante). */
+window.BARESAND_CONTENT = {
+  brand: {
+    name: 'Baresand Electronics',
+    role: 'Consultoría de ingeniería electrónica',
+    line: 'De la arena al silicio',
+    promise: 'Te ayudamos a decidir, diseñar y validar la tecnología que tu proyecto necesita.',
+  },
+  contact: {
+    instagram: '@bare.sand',
+    instagramUrl: 'https://www.instagram.com/bare.sand/',
+    email: 'contacto@baresand.tech',
+    place: 'Corrientes · Argentina',
+    coords: {lat: -27.47, lon: -58.83},
+  },
+  nav: [
+    {id: 'enfoque', label: 'Enfoque'},
+    {id: 'servicios', label: 'Servicios'},
+    {id: 'casos', label: 'Casos'},
+    {id: 'contacto', label: 'Contacto'},
+  ],
+  sections: [
+    {
+      id: 'inicio', shape: 'logo',
+      kicker: 'Baresand Electronics',
+      title: 'Consultoría de ingeniería electrónica',
+      lead: 'De la idea al silicio. Te ayudamos a decidir, diseñar y validar la tecnología que tu proyecto necesita.',
+      cta: {label: 'Contanos tu proyecto', href: '#contacto'},
+    },
+    {
+      id: 'enfoque', shape: 'compass', nav: 'enfoque',
+      kicker: 'Enfoque',
+      title: 'Primero entendemos. Después diseñamos.',
+      lead: 'Antes de una línea de código o de una placa, hacemos las preguntas correctas: qué hay que resolver, con qué restricciones y a qué costo.',
+      moreLabel: 'Cómo trabajamos',
+      steps: [
+        {title: 'Diagnóstico', text: 'Relevamos el problema, el entorno y los requisitos técnicos y de negocio. Salís con un informe claro de qué conviene hacer.'},
+        {title: 'Arquitectura', text: 'Definimos la solución completa: sensores, electrónica, comunicaciones, software, plazos y costos estimados.'},
+        {title: 'Desarrollo y validación', text: 'Prototipamos, medimos y ajustamos hasta que funcione en las condiciones reales de uso.'},
+        {title: 'Transferencia', text: 'Documentación, soporte y acompañamiento para fabricar, instalar o escalar con tu equipo.'},
+      ],
+    },
+    {
+      id: 'donde', shape: 'globe',
+      kicker: 'Dónde estamos',
+      title: 'Desde el nordeste argentino, para cualquier lugar.',
+      lead: 'Trabajamos en campo cuando el proyecto lo pide y a distancia cuando no hace falta viajar.',
+      detail: 'Corrientes Capital · Argentina',
+    },
+    {
+      id: 'electronica', shape: 'chip', nav: 'servicios', group: 'Servicios',
+      kicker: 'Electrónica',
+      title: 'Hardware a medida, de la idea a la placa.',
+      lead: 'Circuitos, placas y sistemas embebidos pensados desde el primer día para fabricarse.',
+      moreLabel: 'Qué incluye',
+      items: ['Diseño de circuitos y placas (PCB)', 'Sistemas embebidos y sensores', 'Prototipado y ensayos', 'Gabinetes y piezas en 3D'],
+    },
+    {
+      id: 'firmware', shape: 'code', group: 'Servicios',
+      kicker: 'Firmware y software',
+      title: 'El código que despierta al silicio.',
+      lead: 'Firmware confiable en el dispositivo y software para ver, controlar y analizar lo que pasa.',
+      moreLabel: 'Qué incluye',
+      items: ['Firmware para microcontroladores', 'Conectividad e IoT', 'Paneles y aplicaciones de monitoreo', 'Integración con sistemas existentes'],
+    },
+    {
+      id: 'ia', shape: 'neural', group: 'Servicios',
+      kicker: 'Inteligencia artificial',
+      title: 'Datos que se convierten en decisiones.',
+      lead: 'Visión por computadora y modelos aplicados a problemas concretos de la industria, la energía y el campo.',
+      moreLabel: 'Qué incluye',
+      items: ['Visión por computadora', 'Detección de anomalías', 'Procesamiento en el dispositivo (edge)', 'Análisis de datos de sensores'],
+    },
+    {
+      id: 'casos', shape: 'sprout', nav: 'casos',
+      kicker: 'Casos',
+      title: 'Proyectos que ya están funcionando.',
+      lead: 'Tres problemas reales, tres soluciones en uso.',
+      cases: [
+        {id: 'cultivos', shape: 'sprout', tag: 'Agrotecnología', title: 'Automatización de cultivos',
+          lead: 'Controladores que regulan humedad, ventilación y microclima en cultivos de hongos e hidroponía.',
+          more: 'Con los parámetros bajo control, el ambiente se mantiene estable: el cultivo crece más rápido y el producto final sale con mejor calidad.'},
+        {id: 'transito', shape: 'car', tag: 'Transporte', title: 'Contador de vehículos',
+          lead: 'Monitoreo del tránsito en rutas y corredores para planificar obras.',
+          more: 'Los datos muestran la demanda real de cada tramo y ayudan a elegir la alternativa de obra más adecuada.'},
+        {id: 'fallas', shape: 'tower', tag: 'Energía · IA', title: 'Detección de fallas eléctricas',
+          lead: 'Visión por computadora sobre imágenes de drones para encontrar fallas en líneas de media y alta tensión.',
+          more: 'Encontrar y ubicar una falla a tiempo evita cortes, baja los costos de mantenimiento y mejora la eficiencia de la red.'},
+      ],
+    },
+    {
+      id: 'contacto', shape: 'logo', nav: 'contacto',
+      kicker: 'Contacto',
+      title: 'Contanos tu desafío técnico.',
+      lead: 'Una primera conversación, sin compromiso, para entender tu proyecto y ver cómo podemos ayudarte.',
+    },
+  ],
+  // extra areas used by the final site (Tablero)
+  extra: {
+    nosotros: {
+      id: 'nosotros', shape: 'team',
+      kicker: 'Nosotros',
+      title: 'Ingenieros que disfrutan los problemas difíciles.',
+      lead: 'Somos un equipo joven con más de 10 años de experiencia combinada en electrónica, inteligencia artificial y desarrollo de software.',
+      body: [
+        'Nos gusta formar parte del proceso detrás de una buena idea: entender el problema, elegir la tecnología correcta y llevarla a algo que funcione en el mundo real.',
+        'Trabajamos desde Corrientes con clientes de todo el país, en campo cuando el proyecto lo pide y a distancia cuando no hace falta viajar.',
+      ],
+    },
+    faq: {
+      id: 'preguntas', shape: 'question',
+      kicker: 'Preguntas frecuentes',
+      title: 'Lo que nos suelen preguntar antes de empezar.',
+      lead: 'Plazos, pagos, documentación y soporte, en pocas líneas.',
+      items: [
+        {q: '¿Trabajan con empresas chicas?', a: 'Sí. Trabajamos con empresas de todos los tamaños, desde emprendimientos hasta grandes compañías, y adaptamos la solución al presupuesto y a la necesidad.'},
+        {q: '¿Cuánto tarda un proyecto?', a: 'Depende de la complejidad: los proyectos simples llevan de 2 a 4 semanas y las soluciones complejas, de 3 a 6 meses. Después del diagnóstico te entregamos un cronograma detallado.'},
+        {q: '¿Pueden trabajar a distancia?', a: 'Sí. Usamos metodologías ágiles y herramientas de colaboración en línea para trabajar con clientes de cualquier lugar.'},
+        {q: '¿Entregan documentación?', a: 'Sí: documentación técnica, manuales de usuario, esquemas eléctricos y código fuente comentado en cada proyecto.'},
+        {q: '¿Capacitan a nuestro equipo?', a: 'Sí. Capacitamos a tu equipo para que pueda operar y mantener la solución que desarrollamos.'},
+        {q: '¿Dan soporte después de la entrega?', a: 'Sí: garantía, mantenimiento, actualizaciones y asistencia técnica.'},
+        {q: '¿Cómo se paga?', a: '50 % al inicio, 30 % en hitos intermedios y 20 % al finalizar. Aceptamos transferencia bancaria y pagos digitales.'},
+        {q: '¿Qué tecnologías usan?', a: 'Microcontroladores, IoT, machine learning, desarrollo web y mobile, y diseño CAD 3D.'},
+      ],
+    },
+  },
+};
