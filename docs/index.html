@@ -81,7 +81,7 @@
   .nav{transition:opacity .5s var(--ease)}
   body.panel-open .nav{opacity:0;pointer-events:none}
   .panel[hidden]{display:none}
-  .panel .inner{max-height:calc(100svh - 190px);overflow:auto;padding-right:12px;transform:translateY(18px);transition:transform .8s var(--ease);scrollbar-width:thin;scrollbar-color:rgba(247,245,240,.2) transparent}
+  .panel .inner{max-height:calc(100svh - 190px);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;padding-right:12px;transform:translateY(18px);transition:transform .8s var(--ease);scrollbar-width:thin;scrollbar-color:rgba(247,245,240,.2) transparent}
   .panel.open .inner{transform:none}
   .panel .top{position:absolute;top:calc(20px + env(safe-area-inset-top,0px));left:var(--gut);right:var(--gut);display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:2}
   .panel .top .where{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--faint)}
@@ -130,7 +130,7 @@
 <div class="vignette"></div>
 <main id="main"></main>
 <footer class="site-foot" id="pie"></footer>
-<div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle" hidden>
+<div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle" data-lenis-prevent hidden>
   <div class="top"><span class="where" id="where"></span><button class="btn ghost" id="close" type="button">Cerrar ✕</button></div>
   <div class="inner" id="panelInner" tabindex="-1"></div><div></div>
   <div class="steps-nav"><button type="button" id="prev">← <span></span></button><button type="button" id="next"><span></span> →</button></div>
